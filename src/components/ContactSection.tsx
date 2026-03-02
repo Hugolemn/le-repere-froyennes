@@ -10,7 +10,6 @@ const ContactSection = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Info */}
           <div className="space-y-6">
             <div className="flex items-start gap-4 bg-background rounded-xl p-6 border border-border">
               <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-brand-light text-primary flex items-center justify-center">
@@ -18,7 +17,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-display font-bold text-foreground mb-1">Adresse</h3>
-                <p className="text-muted-foreground">Rue de la Taverne de Maire 7<br />7503 Froyennes, Tournai, Belgique</p>
+                <p className="text-muted-foreground">Rue de la Taverne de Maire 7<br />7503 Froyennes, Belgique</p>
               </div>
             </div>
 
@@ -57,7 +56,6 @@ const ContactSection = () => {
             </a>
           </div>
 
-          {/* Map */}
           <div className="rounded-2xl overflow-hidden border border-border h-[400px] lg:h-auto">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2546.5!2d3.376!3d50.615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2f44ed3e0c7e5%3A0x0!2sRue+de+la+Taverne+de+Maire+7%2C+7503+Froyennes!5e0!3m2!1sfr!2sbe!4v1700000000000!5m2!1sfr!2sbe"

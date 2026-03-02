@@ -1,13 +1,13 @@
-import gallerySandwiches from "@/assets/gallery-sandwiches.jpg";
-import gallerySalad from "@/assets/gallery-salad.jpg";
-import galleryPlanche from "@/assets/gallery-planche.jpg";
-import galleryAmbiance from "@/assets/gallery-ambiance.jpg";
+import photoSandwiches from "@/assets/photo-sandwiches.jpg";
+import photoProduits from "@/assets/photo-produits.jpg";
+import photoComptoir from "@/assets/photo-comptoir.jpg";
+import photoCarte from "@/assets/photo-carte.jpg";
 
 const images = [
-  { src: gallerySandwiches, alt: "Assortiment de sandwichs et wraps frais" },
-  { src: gallerySalad, alt: "Salade fraîche préparée chez Le Repère" },
-  { src: galleryPlanche, alt: "Planche apéro avec charcuterie et fromages" },
-  { src: galleryAmbiance, alt: "Intérieur chaleureux de la sandwicherie Le Repère" },
+  { src: photoSandwiches, alt: "Assortiment de sandwichs et bowls frais chez Le Repère" },
+  { src: photoProduits, alt: "Sandwichs, salades et pâtisseries Le Repère" },
+  { src: photoComptoir, alt: "Le comptoir de la sandwicherie Le Repère à Froyennes" },
+  { src: photoCarte, alt: "La carte du menu Le Repère" },
 ];
 
 const GallerySection = () => {
@@ -28,7 +28,7 @@ const GallerySection = () => {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/20 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/20 transition-colors duration-300" />
             </div>
           ))}
         </div>

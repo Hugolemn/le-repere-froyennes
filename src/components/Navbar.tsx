@@ -1,4 +1,4 @@
-import { Phone, Menu, ChevronDown } from "lucide-react";
+import { Phone, Menu } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
@@ -20,10 +20,9 @@ const Navbar = () => {
           Le Repère
         </a>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors">
+            <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               {l.label}
             </a>
           ))}
@@ -33,18 +32,16 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button onClick={() => setOpen(!open)} className="md:hidden p-2 text-foreground">
           <Menu size={24} />
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden bg-background border-b border-border animate-fade-in">
           <div className="container py-4 flex flex-col gap-3">
             {navLinks.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-sm font-medium text-foreground/70 hover:text-primary py-2">
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-primary py-2">
                 {l.label}
               </a>
             ))}
