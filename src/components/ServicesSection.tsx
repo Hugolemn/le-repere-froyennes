@@ -1,9 +1,10 @@
-import { UtensilsCrossed, ShoppingBag, Truck } from "lucide-react";
+import { UtensilsCrossed, ShoppingBag, Truck, ChefHat } from "lucide-react";
 
 const services = [
   { icon: UtensilsCrossed, title: "Sur place", desc: "Installez-vous confortablement et savourez votre repas dans notre espace accueillant." },
   { icon: ShoppingBag, title: "À emporter", desc: "Commandez et récupérez votre sandwich fraîchement préparé en quelques minutes." },
   { icon: Truck, title: "Livraison", desc: "Recevez vos plats favoris directement chez vous ou au bureau." },
+  { icon: ChefHat, title: "Service Traiteur", desc: "Pour vos événements, fêtes ou réunions, faites appel à notre service traiteur sur mesure." },
 ];
 
 const ServicesSection = () => {
@@ -16,7 +17,7 @@ const ServicesSection = () => {
           <p className="text-muted-foreground text-lg">Que vous préfériez manger sur place, emporter ou vous faire livrer, on s'adapte !</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {services.map((s) => (
             <div key={s.title} className="text-center group">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-primary text-primary-foreground mb-6 group-hover:scale-110 transition-transform shadow-lg">

@@ -38,8 +38,8 @@ const ContactSection = () => {
               <div>
                 <h3 className="font-display font-bold text-foreground mb-1">Horaires</h3>
                 <div className="text-muted-foreground text-sm space-y-1">
-                  <p>Lundi – Vendredi : 10h00 – 15h00</p>
-                  <p>Samedi : 10h00 – 14h00</p>
+                  <p>Lundi – Vendredi : 07h30 – 15h00</p>
+                  <p>Samedi : 10h00 – 15h00</p>
                   <p>Dimanche : Fermé</p>
                 </div>
               </div>
