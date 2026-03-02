@@ -1,5 +1,6 @@
 import { Phone, Menu } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo.jpg";
 
 const navLinks = [
   { href: "#accueil", label: "Accueil" },
@@ -16,7 +17,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16">
-        <a href="#accueil" className="font-display text-2xl font-bold text-primary">
+        <a href="#accueil" className="flex items-center gap-2 font-display text-2xl font-bold text-primary">
+          <img src={logo} alt="Logo Le Repère" className="h-10 w-10 rounded-full object-cover" />
           Le Repère
         </a>
 
