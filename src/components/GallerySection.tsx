@@ -5,8 +5,8 @@ import photoCarte from "@/assets/photo-carte.jpg";
 
 const images = [
   { src: photoSandwiches, alt: "Assortiment de sandwichs et bowls frais chez Le Repère" },
-  { src: photoProduits, alt: "Sandwichs, salades et pâtisseries Le Repère" },
   { src: photoComptoir, alt: "Le comptoir de la sandwicherie Le Repère à Froyennes" },
+  { src: photoProduits, alt: "Sandwichs, salades et pâtisseries Le Repère" },
   { src: photoCarte, alt: "La carte du menu Le Repère" },
 ];
 

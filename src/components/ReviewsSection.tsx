@@ -1,10 +1,10 @@
 import { Star, Quote } from "lucide-react";
 
 const reviews = [
-  { name: "Marie D.", text: "Service impeccable et produits toujours frais. Mon sandwich préféré, c'est Le Repère !", rating: 5 },
-  { name: "Thomas L.", text: "Sandwichs généreux et délicieux. Le meilleur rapport qualité-prix de Tournai.", rating: 5 },
-  { name: "Sophie B.", text: "Accueil chaleureux, je recommande les yeux fermés. On y retourne chaque semaine !", rating: 5 },
-  { name: "Lucas M.", text: "La planche apéro est incroyable ! Produits frais et service rapide, que demander de plus ?", rating: 4 },
+  { name: "Cédric D.", text: "C'est la 1ère fois que j'y suis allé aujourd'hui. J'y retournerai, l'accueil est sympa et fiable avec des ingrédients frais. 😉", rating: 5 },
+  { name: "Zoë P.", text: "Excellente découverte ! Les sandwiches sont savoureux, avec un gros coup de cœur pour le Kebab, à la fois original et gourmand. Le personnel est chaleureux et toujours à l'écoute pour s'adapter à vos préférences. Une adresse à tester sans hésiter !", rating: 5 },
+  { name: "Megan D.", text: "Très bon sandwich, des baguettes généreuses et moelleuses ! Rapport qualité prix 👍 Le personnel est très réactif et attentionné.", rating: 5 },
+  { name: "Mike M.", text: "Merveilleux, délicieux, un service agréable avec des propriétaires sympathiques. Enfin un sandwich qui te calle la faim. Je recommande, allez-y !", rating: 5 },
 ];
 
 const ReviewsSection = () => {
@@ -23,7 +23,7 @@ const ReviewsSection = () => {
               ))}
             </div>
             <span className="font-display text-2xl font-bold text-foreground">4,7</span>
-            <span className="text-muted-foreground text-sm">/ 5 · 47 avis Google</span>
+            <span className="text-muted-foreground text-sm">/ 5 · 48 avis Google</span>
           </div>
         </div>
 
