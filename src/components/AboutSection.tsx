@@ -24,7 +24,7 @@ const AboutSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((f, i) => (
-            <div key={f.title} className="bg-card rounded-2xl p-8 text-center hover:shadow-lg transition-shadow border border-border group" style={{ animationDelay: `${i * 0.1}s` }}>
+            <div key={f.title} className="bg-card rounded-2xl p-8 text-center hover:shadow-lg transition-shadow border border-border group">
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-brand-light text-primary mb-5 group-hover:scale-110 transition-transform">
                 <f.icon size={28} />
               </div>
