@@ -30,7 +30,7 @@ const menuItems: Record<Category, { name: string; desc: string; price: string }[
     { name: "Poulet samouraï", desc: "", price: "4,00 €" },
     { name: "Poulet curry", desc: "", price: "4,00 €" },
     { name: "Poulet andalouse", desc: "", price: "4,00 €" },
-    { name: "Pâtés", desc: "", price: "4,00 €" },
+    
     { name: "Boulette", desc: "", price: "4,20 €" },
     { name: "Émincés de poulet", desc: "", price: "4,50 €" },
     { name: "Scampis ail", desc: "", price: "4,50 €" },
