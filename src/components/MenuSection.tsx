@@ -97,7 +97,7 @@ const menuItems: Record<Category, { name: string; desc: string; price: string }[
   autres: [
     { name: "Pizza (1/4)", desc: "Variable selon la suggestion du moment", price: "3,50 €" },
     { name: "Croque Classique", desc: "Jambon, emmental, mozzarella", price: "3,00 €" },
-    { name: "Lasagne Bolognaise", desc: "Bolognaise, jambon, sauce tomate, béchamel, mozzarella", price: "9,50 €" },
+    
   ],
   sauces: [
     { name: "Mayonnaise", desc: "", price: "" },
