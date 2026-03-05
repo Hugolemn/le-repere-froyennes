@@ -166,9 +166,9 @@ const MenuSection = () => {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4 max-w-5xl mx-auto">
             {menuItems[active].map((item) => (
-              <div key={item.name} className="bg-background rounded-xl p-5 border border-border hover:border-primary/40 hover:shadow-md transition-all group">
+              <div key={item.name} className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)] bg-background rounded-xl p-5 border border-border hover:border-primary/40 hover:shadow-md transition-all group">
                 <div className="flex items-start justify-between gap-3 mb-1">
                   <h3 className="font-display text-base font-bold text-foreground group-hover:text-primary transition-colors">{item.name}</h3>
                   {item.price && <span className="text-primary font-bold text-base whitespace-nowrap">{item.price}</span>}
