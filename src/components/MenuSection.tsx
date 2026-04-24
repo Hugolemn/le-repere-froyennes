@@ -89,10 +89,8 @@ const menuItems: Record<Category, { name: string; desc: string; price: string }[
   ],
   gouter: [
     { name: "Donuts", desc: "", price: "1,80 €" },
-    { name: "Crêpes", desc: "", price: "1,80 €" },
-    { name: "Gaufres", desc: "", price: "2,00 €" },
-    { name: "Gaufres Nutella", desc: "", price: "2,30 €" },
     { name: "Saucisse piquante sèche", desc: "", price: "2,20 €" },
+    { name: "Saucisse sèche non piquante", desc: "", price: "2,20 €" },
     { name: "Muffins", desc: "", price: "2,90 €" },
   ],
   autres: [
