@@ -10,7 +10,7 @@ const categories: { key: Category; label: string; emoji: string }[] = [
   { key: "pates", label: "Pâtes", emoji: "🍝" },
   { key: "petitdej", label: "Petit déj", emoji: "☕" },
   { key: "gouter", label: "Goûter", emoji: "🍩" },
-  { key: "autres", label: "Autres", emoji: "🍕" },
+  { key: "autres", label: "Autres", emoji: "🥪" },
   { key: "sauces", label: "Sauces", emoji: "🧂" },
   { key: "supplements", label: "Suppléments", emoji: "➕" },
 ];
