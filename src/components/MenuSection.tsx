@@ -89,7 +89,7 @@ const menuItems: Record<Category, { name: string; desc: string; price: string }[
   ],
   gouter: [
     { name: "Donuts", desc: "", price: "1,80 €" },
-    { name: "Saucisse piquante sèche", desc: "", price: "2,20 €" },
+    { name: "Saucisse sèche piquante", desc: "", price: "2,20 €" },
     { name: "Saucisse sèche non piquante", desc: "", price: "2,20 €" },
     { name: "Muffins", desc: "", price: "2,90 €" },
   ],
