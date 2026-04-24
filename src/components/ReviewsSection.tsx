@@ -22,7 +22,7 @@ const ReviewsSection = () => {
                 <Star key={i} size={20} className={i < 5 ? "fill-accent text-accent" : "text-border"} />
               ))}
             </div>
-            <span className="font-display text-2xl font-bold text-foreground">4,7</span>
+            <span className="font-display text-2xl font-bold text-foreground">4,8</span>
             <span className="text-muted-foreground text-sm">/ 5 · 51 avis Google</span>
           </div>
         </div>
