@@ -110,6 +110,13 @@ const menuItems: Record<Category, { name: string; desc: string; price: string }[
     { name: "Brasil", desc: "", price: "" },
     { name: "Algérienne", desc: "", price: "" },
     { name: "Pita ail", desc: "", price: "" },
+    { name: "Thaïlandaise", desc: "", price: "" },
+    { name: "Hamburger", desc: "", price: "" },
+    { name: "Tartare", desc: "", price: "" },
+    { name: "Barbecue grill", desc: "", price: "" },
+    { name: "Hannibal", desc: "", price: "" },
+    { name: "Martino", desc: "", price: "" },
+    { name: "Joppie", desc: "", price: "" },
   ],
   supplements: [
     { name: "Baguette fitness", desc: "", price: "+0,30 €" },
