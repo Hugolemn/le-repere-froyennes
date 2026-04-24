@@ -26,6 +26,7 @@ const menuItems: Record<Category, { name: string; desc: string; price: string }[
     { name: "Salade de pita", desc: "", price: "4,00 €" },
     { name: "Thon mayo", desc: "", price: "4,00 €" },
     { name: "Thon piquant", desc: "", price: "4,00 €" },
+    { name: "Thon cocktail", desc: "", price: "4,00 €" },
     { name: "Poulet mayo", desc: "", price: "4,00 €" },
     { name: "Poulet samouraï", desc: "", price: "4,00 €" },
     { name: "Poulet curry", desc: "", price: "4,00 €" },
