@@ -23,7 +23,7 @@ const ReviewsSection = () => {
               ))}
             </div>
             <span className="font-display text-2xl font-bold text-foreground">4,7</span>
-            <span className="text-muted-foreground text-sm">/ 5 · 48 avis Google</span>
+            <span className="text-muted-foreground text-sm">/ 5 · 51 avis Google</span>
           </div>
         </div>
 
