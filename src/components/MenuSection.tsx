@@ -95,9 +95,7 @@ const menuItems: Record<Category, { name: string; desc: string; price: string }[
     { name: "Muffins", desc: "", price: "2,90 €" },
   ],
   autres: [
-    { name: "Pizza (1/4)", desc: "Variable selon la suggestion du moment", price: "3,50 €" },
     { name: "Croque Classique", desc: "Jambon, emmental, mozzarella", price: "3,00 €" },
-    
   ],
   sauces: [
     { name: "Mayonnaise", desc: "", price: "" },
