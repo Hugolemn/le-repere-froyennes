@@ -26,8 +26,8 @@ const MentionsLegales = () => {
               <li><span className="text-foreground font-medium">Adresse :</span> Rue de la Taverne de Maire 7, 7503 Froyennes, Belgique</li>
               <li><span className="text-foreground font-medium">Téléphone :</span> <a href="tel:0472684162" className="hover:text-primary transition-colors">0472 68 41 62</a></li>
               <li><span className="text-foreground font-medium">Email :</span> <a href="mailto:info@lereperefroyennes.be" className="hover:text-primary transition-colors">info@lereperefroyennes.be</a></li>
-              <li><span className="text-foreground font-medium">N° BCE :</span> BE1018846131</li>
-              <li><span className="text-foreground font-medium">N° TVA :</span> BE1018846131</li>
+              <li><span className="text-foreground font-medium">N° BCE :</span> 1018.846.131</li>
+              <li><span className="text-foreground font-medium">N° TVA :</span> BE 1018.846.131</li>
             </ul>
           </section>
 
