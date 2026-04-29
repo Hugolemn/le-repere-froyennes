@@ -1,4 +1,5 @@
 import { Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -45,10 +46,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 text-center">
+        <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-3 text-center">
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} Le Repère · Sandwicherie à Froyennes. Tous droits réservés.
           </p>
+          <Link
+            to="/mentions-legales"
+            className="text-muted-foreground text-sm hover:text-primary transition-colors"
+          >
+            Mentions légales
+          </Link>
         </div>
       </div>
     </footer>
