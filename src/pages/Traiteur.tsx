@@ -179,7 +179,7 @@ const Traiteur = () => {
             {/* Convivial - highlight */}
             <div className="bg-card border-2 border-primary rounded-2xl p-8 shadow-lg shadow-primary/20 flex flex-col relative">
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
-                ⭐ Le plus demandé
+                Le plus demandé
               </span>
               <span className="self-start text-xs font-semibold bg-primary text-primary-foreground px-3 py-1 rounded-full mb-4 mt-2">20 à 50 personnes</span>
               <h3 className="font-display text-2xl font-bold text-foreground mb-3">Buffet Convivial</h3>
