@@ -148,7 +148,7 @@ const Traiteur = () => {
                   <Icon size={28} />
                 </div>
                 <h3 className="font-display text-xl font-bold text-foreground mb-3">{title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{text}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed text-balance">{text}</p>
               </div>
             ))}
           </div>
@@ -167,7 +167,7 @@ const Traiteur = () => {
             <div className="bg-card border border-border rounded-2xl p-8 shadow-sm flex flex-col">
               <span className="self-start text-xs font-semibold bg-secondary text-secondary-foreground px-3 py-1 rounded-full mb-4">10 à 20 personnes</span>
               <h3 className="font-display text-2xl font-bold text-foreground mb-3">Plateau Découverte</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow text-balance">
                 L'essentiel pour bien recevoir. Un assortiment de sandwichs variés préparés avec nos garnitures maison, présentés en plateau prêt à poser sur la table.
               </p>
               <p className="font-bold text-foreground text-lg mb-5">À partir de XX €/pers</p>
@@ -183,7 +183,7 @@ const Traiteur = () => {
               </span>
               <span className="self-start text-xs font-semibold bg-primary text-primary-foreground px-3 py-1 rounded-full mb-4 mt-2">20 à 50 personnes</span>
               <h3 className="font-display text-2xl font-bold text-foreground mb-3">Buffet Convivial</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow text-balance">
                 Sandwichs, salades maison, petites bouchées salées et une touche sucrée pour finir en beauté. Tout est dressé avec soin avant la livraison.
               </p>
               <p className="font-bold text-foreground text-lg mb-5">À partir de XX €/pers</p>
@@ -196,7 +196,7 @@ const Traiteur = () => {
             <div className="bg-card border border-border rounded-2xl p-8 shadow-sm flex flex-col">
               <span className="self-start text-xs font-semibold bg-secondary text-secondary-foreground px-3 py-1 rounded-full mb-4">50 personnes et +</span>
               <h3 className="font-display text-2xl font-bold text-foreground mb-3">Formule Événement</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow text-balance">
                 Pour les grandes occasions, on compose ensemble le menu qui correspond à votre moment. Aucune limite de personnalisation, tout se discute.
               </p>
               <p className="font-bold text-foreground text-lg mb-5">Sur devis personnalisé</p>
@@ -225,7 +225,7 @@ const Traiteur = () => {
                   <Icon size={26} className="text-primary" />
                 </div>
                 <h3 className="font-display text-lg font-bold text-foreground mb-2">{title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{text}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed text-balance">{text}</p>
               </div>
             ))}
           </div>
@@ -243,7 +243,7 @@ const Traiteur = () => {
             {occasions.map((o) => (
               <span
                 key={o}
-                className="px-5 py-2.5 rounded-full text-sm font-medium bg-card border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
+                className="cursor-default px-5 py-2.5 rounded-full text-sm font-medium bg-card border border-border text-foreground transition-colors"
               >
                 {o}
               </span>
