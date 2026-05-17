@@ -34,8 +34,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center" style={{ gap: "28px" }}>
           <Link
             to="/traiteur"
-            className="inline-flex items-center gap-1.5 bg-primary text-white font-semibold text-sm transition-colors duration-200 hover:bg-primary/90"
-            style={{ borderRadius: "999px", padding: "6px 16px" }}
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           >
             <UtensilsCrossed size={15} />
             Traiteur
@@ -67,8 +66,7 @@ const Navbar = () => {
               <Link
                 to="/traiteur"
                 onClick={() => setOpen(false)}
-                className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold text-sm w-auto mx-auto"
-                style={{ borderRadius: "999px", padding: "8px 18px", display: "inline-flex" }}
+                className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary py-2"
               >
                 <UtensilsCrossed size={15} />
                 Traiteur
