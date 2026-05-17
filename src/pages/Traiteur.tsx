@@ -60,16 +60,16 @@ const steps = [
 ];
 
 const occasions = [
-  "🏢 Réunion d'entreprise",
-  "🎂 Anniversaire",
-  "👨‍👩‍👧 Repas de famille",
-  "🥂 Pot de départ ou d'arrivée",
-  "🎓 Remise de diplômes",
-  "⚽ Événement associatif ou sportif",
-  "💍 Petite réception privée",
-  "🏫 Journée scolaire ou parascolaire",
-  "🎄 Fête de fin d'année",
-  "🤝 Team building",
+  "Réunion d'entreprise",
+  "Anniversaire",
+  "Repas de famille",
+  "Pot de départ ou d'arrivée",
+  "Remise de diplômes",
+  "Événement associatif ou sportif",
+  "Petite réception privée",
+  "Journée scolaire ou parascolaire",
+  "Fête de fin d'année",
+  "Team building",
 ];
 
 const Traiteur = () => {
