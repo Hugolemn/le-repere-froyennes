@@ -254,7 +254,7 @@ const Traiteur = () => {
       <section id="devis" className="py-20 lg:py-28 bg-background" style={{ scrollMarginTop: "80px" }}>
         <div className="container max-w-4xl">
           <div className="text-center mb-10">
-            <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-6">
+            <h2 className="text-3xl lg:text-4xl xl:text-5xl lg:whitespace-nowrap font-display font-bold text-foreground mb-6">
               Votre devis gratuit en quelques lignes
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
