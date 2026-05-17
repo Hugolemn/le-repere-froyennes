@@ -156,7 +156,7 @@ const Traiteur = () => {
       </section>
 
       {/* FORMULES */}
-      <section id="formules" className="py-20 lg:py-28 bg-warm" style={{ scrollMarginTop: "80px" }}>
+      <section id="formules" className="py-20 lg:py-28 bg-background" style={{ scrollMarginTop: "80px" }}>
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-4">Nos formules traiteur</h2>
@@ -233,7 +233,7 @@ const Traiteur = () => {
       </section>
 
       {/* OCCASIONS */}
-      <section className="py-20 lg:py-28 bg-warm">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-4">Pour chaque évènement</h2>
