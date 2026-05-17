@@ -107,7 +107,7 @@ const Traiteur = () => {
         </div>
         <div className="relative z-10 container text-center px-4 py-32">
           <span className="inline-flex items-center gap-2 bg-primary/90 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-6 animate-fade-up">
-            <UtensilsCrossed size={16} /> Service Traiteur à Froyennes
+            <UtensilsCrossed size={16} /> Service Traiteur Le Repère Froyennes
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6 animate-fade-up">
             On s'occupe de tout,<br />
@@ -243,7 +243,7 @@ const Traiteur = () => {
             {occasions.map((o) => (
               <span
                 key={o}
-                className="px-5 py-2.5 rounded-full text-sm font-semibold bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
+                className="px-5 py-2.5 rounded-full text-sm font-medium bg-card border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
               >
                 {o}
               </span>
