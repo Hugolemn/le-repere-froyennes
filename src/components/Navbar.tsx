@@ -29,9 +29,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-        </div>
-
-        <div className="hidden md:flex items-center" style={{ gap: "28px" }}>
+          <span aria-hidden="true" className="text-muted-foreground/40 select-none">|</span>
           <Link
             to="/traiteur"
             className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
@@ -39,6 +37,9 @@ const Navbar = () => {
             <UtensilsCrossed size={15} />
             Traiteur
           </Link>
+        </div>
+
+        <div className="hidden md:flex items-center">
           <a href="tel:0472684162" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
             <Phone size={16} />
             Appeler
