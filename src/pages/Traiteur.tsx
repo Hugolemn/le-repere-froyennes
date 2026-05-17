@@ -132,7 +132,7 @@ const Traiteur = () => {
       <section id="confiance" className="py-20 lg:py-28 bg-card" style={{ scrollMarginTop: "80px" }}>
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-4">
+            <h2 className="text-3xl lg:text-4xl xl:text-5xl lg:whitespace-nowrap font-display font-bold text-foreground mb-4">
               Un traiteur généreux, à taille humaine
             </h2>
             <p className="text-muted-foreground text-base">
