@@ -23,39 +23,27 @@ const Navbar = () => {
           Le Repère
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((l) => (
             <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
               {l.label}
             </a>
           ))}
+        </div>
 
-          <div
-            aria-hidden="true"
-            className="self-center flex-shrink-0"
-            style={{
-              width: "1px",
-              height: "20px",
-              backgroundColor: "rgba(255, 255, 255, 0.25)",
-              margin: "0 16px",
-              pointerEvents: "none",
-            }}
-          />
-
-          <div className="flex items-center" style={{ gap: "10px" }}>
-            <Link
-              to="/traiteur"
-              className="inline-flex items-center gap-1.5 bg-primary text-white font-semibold text-sm transition-colors duration-200 hover:bg-primary/90"
-              style={{ borderRadius: "999px", padding: "6px 16px" }}
-            >
-              <UtensilsCrossed size={15} />
-              Traiteur
-            </Link>
-            <a href="tel:0472684162" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
-              <Phone size={16} />
-              Appeler
-            </a>
-          </div>
+        <div className="hidden md:flex items-center" style={{ gap: "28px" }}>
+          <Link
+            to="/traiteur"
+            className="inline-flex items-center gap-1.5 bg-primary text-white font-semibold text-sm transition-colors duration-200 hover:bg-primary/90"
+            style={{ borderRadius: "999px", padding: "6px 16px" }}
+          >
+            <UtensilsCrossed size={15} />
+            Traiteur
+          </Link>
+          <a href="tel:0472684162" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
+            <Phone size={16} />
+            Appeler
+          </a>
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden p-2 text-foreground">

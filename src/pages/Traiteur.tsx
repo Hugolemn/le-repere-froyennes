@@ -60,16 +60,16 @@ const steps = [
 ];
 
 const occasions = [
-  "🏢 Réunion d'entreprise",
-  "🎂 Anniversaire",
-  "👨‍👩‍👧 Repas de famille",
-  "🥂 Pot de départ ou d'arrivée",
-  "🎓 Remise de diplômes",
-  "⚽ Événement associatif ou sportif",
-  "💍 Petite réception privée",
-  "🏫 Journée scolaire ou parascolaire",
-  "🎄 Fête de fin d'année",
-  "🤝 Team building",
+  "Réunion d'entreprise",
+  "Anniversaire",
+  "Repas de famille",
+  "Pot de départ ou d'arrivée",
+  "Remise de diplômes",
+  "Événement associatif ou sportif",
+  "Petite réception privée",
+  "Journée scolaire ou parascolaire",
+  "Fête de fin d'année",
+  "Team building",
 ];
 
 const Traiteur = () => {
@@ -179,7 +179,7 @@ const Traiteur = () => {
             {/* Convivial - highlight */}
             <div className="bg-card border-2 border-primary rounded-2xl p-8 shadow-lg shadow-primary/20 flex flex-col relative">
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-4 py-1.5 rounded-full whitespace-nowrap">
-                ⭐ Le plus demandé
+                Le plus demandé
               </span>
               <span className="self-start text-xs font-semibold bg-primary text-primary-foreground px-3 py-1 rounded-full mb-4 mt-2">20 à 50 personnes</span>
               <h3 className="font-display text-2xl font-bold text-foreground mb-3">Buffet Convivial</h3>
@@ -239,16 +239,14 @@ const Traiteur = () => {
       <section className="py-20 lg:py-28 bg-warm">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-4">Pour quelle occasion ?</h2>
+            <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-4">Pour toute occasion</h2>
             <p className="text-muted-foreground">Petite ou grande, professionnelle ou familiale, chaque occasion mérite un bon repas.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {occasions.map((o, i) => (
+            {occasions.map((o) => (
               <span
                 key={o}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium ${
-                  i % 2 === 0 ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"
-                }`}
+                className="px-5 py-2.5 rounded-full text-sm font-medium bg-card border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
               >
                 {o}
               </span>
@@ -265,9 +263,9 @@ const Traiteur = () => {
               Votre devis gratuit en quelques lignes
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
-              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">✅ Réponse sous 24h</span>
-              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">🎁 Devis 100% gratuit</span>
-              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">🔓 Sans engagement</span>
+              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">Réponse sous 24h</span>
+              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">Devis 100% gratuit</span>
+              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">Sans engagement</span>
             </div>
           </div>
 
