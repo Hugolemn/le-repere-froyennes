@@ -14,9 +14,7 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
-
-const heroImg =
-  "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1920&q=80";
+import heroImg from "@/assets/traiteur-hero.jpg";
 
 const trustCards = [
   {
