@@ -101,7 +101,7 @@ const Traiteur = () => {
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "85vh" }}>
         <div className="absolute inset-0">
           <img src={heroImg} alt="Plateaux traiteur Le Repère Froyennes" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-background/55" />
+          <div className="absolute inset-0 bg-background/70" />
         </div>
         <div className="relative z-10 container text-center px-4 py-32">
           <span className="inline-flex items-center gap-2 bg-primary/90 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-6 animate-fade-up">
