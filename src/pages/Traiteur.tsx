@@ -14,9 +14,7 @@ import {
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
-
-const heroImg =
-  "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1920&q=80";
+import heroImg from "@/assets/traiteur-hero.jpg";
 
 const trustCards = [
   {
@@ -103,7 +101,7 @@ const Traiteur = () => {
       <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: "85vh" }}>
         <div className="absolute inset-0">
           <img src={heroImg} alt="Plateaux traiteur Le Repère Froyennes" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-background/55" />
+          <div className="absolute inset-0 bg-background/70" />
         </div>
         <div className="relative z-10 container text-center px-4 py-32">
           <span className="inline-flex items-center gap-2 bg-primary/90 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-6 animate-fade-up">
