@@ -243,7 +243,7 @@ const Traiteur = () => {
             {occasions.map((o) => (
               <span
                 key={o}
-                className="cursor-default px-5 py-2.5 rounded-full text-sm font-medium bg-card border border-border text-foreground transition-colors"
+                className="cursor-default px-5 py-2.5 rounded-full text-sm font-medium bg-card border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
               >
                 {o}
               </span>
