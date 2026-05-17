@@ -239,16 +239,14 @@ const Traiteur = () => {
       <section className="py-20 lg:py-28 bg-warm">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-4">Pour quelle occasion ?</h2>
+            <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-4">Pour toute occasion</h2>
             <p className="text-muted-foreground">Petite ou grande, professionnelle ou familiale, chaque occasion mérite un bon repas.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {occasions.map((o, i) => (
+            {occasions.map((o) => (
               <span
                 key={o}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium ${
-                  i % 2 === 0 ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"
-                }`}
+                className="px-5 py-2.5 rounded-full text-sm font-medium bg-card border border-border text-foreground hover:border-primary hover:text-primary transition-colors"
               >
                 {o}
               </span>
