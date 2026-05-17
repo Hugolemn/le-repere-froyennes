@@ -1,14 +1,15 @@
-import { Phone, Menu } from "lucide-react";
+import { Phone, Menu, UtensilsCrossed } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { href: "#accueil", label: "Accueil" },
-  { href: "#apropos", label: "À propos" },
-  { href: "#menu", label: "Menu" },
-  { href: "#avis", label: "Avis" },
-  { href: "#galerie", label: "Galerie" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#accueil", label: "Accueil" },
+  { href: "/#apropos", label: "À propos" },
+  { href: "/#menu", label: "Menu" },
+  { href: "/#avis", label: "Avis" },
+  { href: "/#galerie", label: "Galerie" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -17,10 +18,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16">
-        <a href="#accueil" className="flex items-center gap-2 font-display text-2xl font-bold text-primary">
+        <Link to="/" className="flex items-center gap-2 font-display text-2xl font-bold text-primary">
           <img src={logo} alt="Logo Le Repère" className="h-10 w-10 rounded-full object-cover" />
           Le Repère
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
@@ -28,10 +29,33 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a href="tel:0472684162" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
-            <Phone size={16} />
-            Appeler
-          </a>
+
+          <div
+            aria-hidden="true"
+            className="self-center flex-shrink-0"
+            style={{
+              width: "1px",
+              height: "20px",
+              backgroundColor: "rgba(255, 255, 255, 0.25)",
+              margin: "0 16px",
+              pointerEvents: "none",
+            }}
+          />
+
+          <div className="flex items-center" style={{ gap: "10px" }}>
+            <Link
+              to="/traiteur"
+              className="inline-flex items-center gap-1.5 bg-primary text-white font-semibold text-sm transition-colors duration-200 hover:bg-primary/90"
+              style={{ borderRadius: "999px", padding: "6px 16px" }}
+            >
+              <UtensilsCrossed size={15} />
+              Traiteur
+            </Link>
+            <a href="tel:0472684162" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
+              <Phone size={16} />
+              Appeler
+            </a>
+          </div>
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden p-2 text-foreground">
@@ -51,6 +75,17 @@ const Navbar = () => {
               <Phone size={16} />
               0472 68 41 62
             </a>
+            <div style={{ borderTop: "1px solid rgba(255,255,255,0.15)", paddingTop: "12px" }}>
+              <Link
+                to="/traiteur"
+                onClick={() => setOpen(false)}
+                className="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold text-sm w-auto mx-auto"
+                style={{ borderRadius: "999px", padding: "8px 18px", display: "inline-flex" }}
+              >
+                <UtensilsCrossed size={15} />
+                Traiteur
+              </Link>
+            </div>
           </div>
         </div>
       )}
