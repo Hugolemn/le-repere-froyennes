@@ -263,9 +263,9 @@ const Traiteur = () => {
               Votre devis gratuit en quelques lignes
             </h2>
             <div className="flex flex-wrap justify-center gap-3">
-              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">✅ Réponse sous 24h</span>
-              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">🎁 Devis 100% gratuit</span>
-              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">🔓 Sans engagement</span>
+              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">Réponse sous 24h</span>
+              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">Devis 100% gratuit</span>
+              <span className="bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold">Sans engagement</span>
             </div>
           </div>
 
