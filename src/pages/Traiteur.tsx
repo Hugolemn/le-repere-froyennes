@@ -210,7 +210,7 @@ const Traiteur = () => {
       <section className="py-20 lg:py-28 bg-card">
         <div className="container">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <h2 className="text-3xl lg:text-5xl font-display font-bold text-foreground mb-4">Simple, rapide, sans prise de tête</h2>
+            <h2 className="text-3xl lg:text-4xl xl:text-5xl lg:whitespace-nowrap font-display font-bold text-foreground mb-4">Simple, rapide, sans prise de tête</h2>
             <p className="text-muted-foreground">De votre demande à la livraison, on gère tout.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto relative">
