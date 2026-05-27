@@ -4,20 +4,17 @@ import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
 
 const occasions = [
-  { emoji: "🏢", title: "Événements d'entreprise", desc: "Pauses gourmandes, lunchs et plateaux pour vos équipes et clients." },
-  { emoji: "💍", title: "Mariages", desc: "Un service traiteur sur mesure pour le plus beau jour de votre vie." },
-  { emoji: "🍼", title: "Baptêmes", desc: "Des préparations délicates pour célébrer en famille en toute sérénité." },
-  { emoji: "🎂", title: "Anniversaires", desc: "Petits ou grands comités, on régale vos invités selon vos envies." },
-  { emoji: "🤝", title: "Réunions & séminaires", desc: "Formules pratiques et savoureuses pour vos rendez-vous professionnels." },
-  { emoji: "🎉", title: "Cocktails & réceptions", desc: "Planches, mignardises et bouchées pour des moments conviviaux." },
+  { title: "Événements d'entreprise", desc: "Pauses gourmandes, lunchs et plateaux pour vos équipes et clients." },
+  { title: "Mariages", desc: "Un service traiteur sur mesure pour le plus beau jour de votre vie." },
+  { title: "Baptêmes", desc: "Des préparations délicates pour célébrer en famille en toute sérénité." },
+  { title: "Anniversaires", desc: "Petits ou grands comités, on régale vos invités selon vos envies." },
+  { title: "Réunions & séminaires", desc: "Formules pratiques et savoureuses pour vos rendez-vous professionnels." },
+  { title: "Cocktails & réceptions", desc: "Planches, mignardises et bouchées pour des moments conviviaux." },
 ];
 
 const produits = [
-  { emoji: "🥖", title: "Minis pains bagnats", desc: "Petits pains garnis frais, parfaits pour les buffets et cocktails." },
-  { emoji: "🌯", title: "Wraps", desc: "Variés et colorés, à déguster en bouchées ou en format classique." },
-];
-
-const planches = [
+  { title: "Minis pains bagnats", desc: "Petits pains garnis frais, parfaits pour les buffets et cocktails." },
+  { title: "Wraps", desc: "Variés et colorés, à déguster en bouchées ou en format classique." },
   { title: "Planche Charcuterie", desc: "Sélection de charcuteries fines, accompagnées de pickles et pains." },
   { title: "Planche Mixte", desc: "Le meilleur des deux mondes : charcuterie et fromages affinés." },
   { title: "Planche Fromage", desc: "Assortiment de fromages de caractère, fruits secs et confitures." },
@@ -136,25 +133,10 @@ const Traiteur = () => {
               title="Frais, généreux, savoureux"
               subtitle="Des préparations fraîches et généreuses, pensées pour régaler vos invités."
             />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl mx-auto mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
               {produits.map((p) => (
                 <Card key={p.title} {...p} />
               ))}
-            </div>
-
-            <div className="max-w-5xl mx-auto">
-              <div className="flex items-center gap-3 justify-center mb-6">
-                <span className="text-4xl">🧆</span>
-                <h3 className="font-display text-2xl lg:text-3xl font-bold text-foreground">Planches Apéros</h3>
-              </div>
-              <p className="text-center text-muted-foreground text-sm mb-8 max-w-xl mx-auto">
-                Trois variantes pour tous les goûts, à partager entre amis ou collègues.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {planches.map((p) => (
-                  <Card key={p.title} title={p.title} desc={p.desc} />
-                ))}
-              </div>
             </div>
           </div>
         </section>
@@ -186,6 +168,9 @@ const Traiteur = () => {
               title="Parlons de votre événement"
               subtitle="Remplissez ce formulaire et nous vous répondrons rapidement avec une proposition adaptée."
             />
+            <p className="text-center text-primary font-semibold text-sm mb-8 -mt-6">
+              Réponse en 24h · Devis gratuit · Sans engagement
+            </p>
             <form
               onSubmit={handleSubmit}
               className="max-w-2xl mx-auto bg-background rounded-2xl p-6 sm:p-8 border border-border space-y-5"
