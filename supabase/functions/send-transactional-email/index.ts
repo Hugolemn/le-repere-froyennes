@@ -117,6 +117,64 @@ Deno.serve(async (req) => {
     )
   }
 
+  // Server-side validation of recipient email (RFC 5322 simplified + length)
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (
+    typeof effectiveRecipient !== 'string' ||
+    effectiveRecipient.length === 0 ||
+    effectiveRecipient.length > 254 ||
+    !emailRegex.test(effectiveRecipient)
+  ) {
+    return new Response(
+      JSON.stringify({ error: 'Invalid recipient email' }),
+      {
+        status: 400,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      }
+    )
+  }
+
+  // Bound templateData: cap field count and per-string length to prevent
+  // oversized payloads abusing the email pipeline.
+  const MAX_FIELDS = 30
+  const MAX_FIELD_LEN = 5000
+  const fieldEntries = Object.entries(templateData)
+  if (fieldEntries.length > MAX_FIELDS) {
+    return new Response(
+      JSON.stringify({ error: 'templateData has too many fields' }),
+      { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  }
+  for (const [k, v] of fieldEntries) {
+    if (typeof v === 'string' && v.length > MAX_FIELD_LEN) {
+      return new Response(
+        JSON.stringify({ error: `templateData.${k} exceeds maximum length` }),
+        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+  }
+
+  // Abuse mitigation: rate-limit sends per recipient using email_send_log.
+  // Caps a single recipient at 5 emails / 10 minutes regardless of caller.
+  // This blunts spam/relay abuse via the public anon-key callable endpoint.
+  const tenMinAgo = new Date(Date.now() - 10 * 60 * 1000).toISOString()
+  const supabaseRL = createClient(supabaseUrl, supabaseServiceKey)
+  const { count: recentCount, error: rateErr } = await supabaseRL
+    .from('email_send_log')
+    .select('id', { count: 'exact', head: true })
+    .eq('recipient_email', effectiveRecipient)
+    .in('status', ['pending', 'sent'])
+    .gte('created_at', tenMinAgo)
+  if (rateErr) {
+    console.error('Rate-limit lookup failed', { error: rateErr })
+  } else if ((recentCount ?? 0) >= 5) {
+    console.warn('Rate limit hit for recipient', { effectiveRecipient, recentCount })
+    return new Response(
+      JSON.stringify({ error: 'Too many requests. Please try again later.' }),
+      { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+    )
+  }
+
   // Create Supabase client with service role (bypasses RLS)
   const supabase = createClient(supabaseUrl, supabaseServiceKey)
 
