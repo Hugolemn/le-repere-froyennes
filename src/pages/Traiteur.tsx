@@ -27,12 +27,12 @@ const produits = [
 ];
 
 const realisations = [
+  { image: realisation2, alt: "Planche apéro traiteur garnie de charcuteries, fruits et gressins" },
   { image: realisation1, alt: "Boîte traiteur Le Repère avec minis pains bagnats prêts à être servis" },
-  { image: realisation2, alt: "Gros plan sur des minis pains bagnats garnis pour un buffet traiteur" },
-  { image: realisation3, alt: "Assortiment de minis pains bagnats présenté sur planche en bois" },
-  { image: realisation4, alt: "Planche apéro traiteur garnie de charcuteries, fruits et gressins" },
-  { image: realisation5, alt: "Sélection de wraps découpés et dressés sur planches en bois" },
   { image: realisation6, alt: "Gros plan sur des wraps traiteur frais et généreusement garnis" },
+  { image: realisation4, alt: "Sélection de wraps découpés et dressés sur planches en bois" },
+  { image: realisation3, alt: "Assortiment de minis pains bagnats présenté sur planche en bois" },
+  { image: realisation5, alt: "Gros plan sur des minis pains bagnats garnis pour un buffet traiteur" },
 ];
 
 const eventTypes = [
