@@ -33,7 +33,7 @@ const produits = [
 ];
 
 const realisations = [
-  { image: realisation2, alt: "Planche apéro traiteur garnie de charcuteries, fruits et gressins" },
+  { image: realisationPauseCafe, alt: "Pause café gourmande avec croissant, pain au chocolat, muffin et cappuccino sur planche en bois" },
   { image: realisation1, alt: "Boîte traiteur Le Repère avec minis pains bagnats prêts à être servis" },
   { image: realisation6, alt: "Gros plan sur des wraps traiteur frais et généreusement garnis" },
   { image: realisation4, alt: "Sélection de wraps découpés et dressés sur planches en bois" },
