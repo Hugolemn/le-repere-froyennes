@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
@@ -79,13 +80,46 @@ const Traiteur = () => {
     document.getElementById("devis")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Demande envoyée !",
-      description: "Nous reviendrons vers vous dans les plus brefs délais.",
-    });
-    setForm({ name: "", email: "", phone: "", eventType: "", guests: "", date: "", message: "" });
+    setSubmitting(true);
+    const id = crypto.randomUUID();
+    const templateData = { ...form };
+    try {
+      const [notif, confirm] = await Promise.all([
+        supabase.functions.invoke("send-transactional-email", {
+          body: {
+            templateName: "devis-notification",
+            idempotencyKey: `devis-notif-${id}`,
+            templateData,
+          },
+        }),
+        supabase.functions.invoke("send-transactional-email", {
+          body: {
+            templateName: "devis-confirmation",
+            recipientEmail: form.email,
+            idempotencyKey: `devis-confirm-${id}`,
+            templateData: { name: form.name, eventType: form.eventType },
+          },
+        }),
+      ]);
+      if (notif.error || confirm.error) throw notif.error || confirm.error;
+      toast({
+        title: "Demande envoyée !",
+        description: "Nous reviendrons vers vous sous 24h. Un email de confirmation vient de vous être envoyé.",
+      });
+      setForm({ name: "", email: "", phone: "", eventType: "", guests: "", date: "", message: "" });
+    } catch (err) {
+      toast({
+        title: "Erreur lors de l'envoi",
+        description: "Merci de réessayer ou de nous contacter au 0472 68 41 62.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
