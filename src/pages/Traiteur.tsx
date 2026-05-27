@@ -191,11 +191,9 @@ const Traiteur = () => {
               title="Frais, généreux, savoureux"
               subtitle="Des préparations fraîches et généreuses, pensées pour régaler vos invités."
             />
-            <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
               {produits.map((p) => (
-                <div key={p.title} className="w-full sm:w-80">
-                  <Card {...p} />
-                </div>
+                <Card key={p.title} {...p} />
               ))}
             </div>
           </div>
