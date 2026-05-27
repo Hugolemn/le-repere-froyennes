@@ -3,6 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
+import heroBg from "@/assets/traiteur-hero-bg.png";
 import realisation1 from "@/assets/traiteur-realisation-1.jpeg";
 import realisation3 from "@/assets/traiteur-realisation-3.jpeg";
 import realisation4 from "@/assets/traiteur-realisation-4.png";
