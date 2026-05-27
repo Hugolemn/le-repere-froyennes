@@ -3,6 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
+import heroBg from "@/assets/traiteur-hero-bg.png";
 import realisation1 from "@/assets/traiteur-realisation-1.jpeg";
 import realisation3 from "@/assets/traiteur-realisation-3.jpeg";
 import realisation4 from "@/assets/traiteur-realisation-4.png";
@@ -138,8 +139,9 @@ const Traiteur = () => {
         {/* 1. Hero */}
         <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-16">
           <div className="absolute inset-0">
-            <div className="w-full h-full bg-gradient-to-br from-brand-light via-background to-card" />
-            <div className="absolute inset-0 bg-background/60" />
+            <img src={heroBg} alt="Confection artisanale d'un pain frais dans la cuisine du Repère" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-background/75" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
           </div>
           <div className="relative z-10 container text-center px-4 py-24">
             <span className="inline-block bg-primary/90 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-6 animate-fade-up">
