@@ -85,7 +85,7 @@ const Traiteur = () => {
           </div>
           <div className="relative z-10 container text-center px-4 py-24">
             <span className="inline-block bg-primary/90 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-6 animate-fade-up">
-              🍽️ Service traiteur
+              Service traiteur Le Repère Froyennes
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
               Un traiteur <span className="text-primary">à votre image</span>,<br />pour chaque événement
