@@ -153,16 +153,6 @@ const Traiteur = () => {
             <p className="text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto mb-10 font-body animate-fade-up" style={{ animationDelay: "0.2s" }}>
               De la réunion d'entreprise au grand mariage, nous mettons notre passion et nos produits frais au service de vos plus beaux moments.
             </p>
-          <div className="relative z-10 container text-center px-4 py-24">
-            <span className="inline-block bg-primary/90 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-6 animate-fade-up">
-              ✨ Service traiteur Le Repère Froyennes
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-              Un traiteur <span className="text-primary">à votre image</span>,<br />pour chaque événement
-            </h1>
-            <p className="text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto mb-10 font-body animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              De la réunion d'entreprise au grand mariage, nous mettons notre passion et nos produits frais au service de vos plus beaux moments.
-            </p>
             <a
               href="#devis"
               onClick={scrollToDevis}
