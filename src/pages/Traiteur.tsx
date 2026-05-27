@@ -4,11 +4,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
 import realisation1 from "@/assets/traiteur-realisation-1.jpeg";
-import realisation2 from "@/assets/traiteur-realisation-2.jpeg";
 import realisation3 from "@/assets/traiteur-realisation-3.jpeg";
 import realisation4 from "@/assets/traiteur-realisation-4.png";
 import realisation5 from "@/assets/traiteur-realisation-5.jpeg";
 import realisation6 from "@/assets/traiteur-realisation-6.jpeg";
+import realisationPauseCafe from "@/assets/traiteur-pause-cafe.jpeg";
 
 const occasions = [
   { title: "Événements d'entreprise", desc: "Pauses gourmandes, lunchs et plateaux pour vos équipes et clients." },
@@ -33,7 +33,7 @@ const produits = [
 ];
 
 const realisations = [
-  { image: realisation2, alt: "Planche apéro traiteur garnie de charcuteries, fruits et gressins" },
+  { image: realisationPauseCafe, alt: "Pause café gourmande avec croissant, pain au chocolat, muffin et cappuccino sur planche en bois" },
   { image: realisation1, alt: "Boîte traiteur Le Repère avec minis pains bagnats prêts à être servis" },
   { image: realisation6, alt: "Gros plan sur des wraps traiteur frais et généreusement garnis" },
   { image: realisation4, alt: "Sélection de wraps découpés et dressés sur planches en bois" },
@@ -64,7 +64,7 @@ const SectionTitle = ({ overline, title, subtitle }: { overline: string; title: 
 );
 
 const Card = ({ emoji, title, desc }: { emoji?: string; title: string; desc: string }) => (
-  <div className="bg-background rounded-xl p-6 border border-border hover:border-primary/40 hover:shadow-md transition-all group">
+  <div className="bg-background rounded-xl p-6 border border-border hover:border-primary/40 hover:shadow-md transition-all group h-full flex flex-col">
     {emoji && <div className="text-4xl mb-3">{emoji}</div>}
     <h3 className="font-display text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
       {title}
@@ -191,11 +191,9 @@ const Traiteur = () => {
               title="Frais, généreux, savoureux"
               subtitle="Des préparations fraîches et généreuses, pensées pour régaler vos invités."
             />
-            <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
               {produits.map((p) => (
-                <div key={p.title} className="w-full sm:w-80">
-                  <Card {...p} />
-                </div>
+                <Card key={p.title} {...p} />
               ))}
             </div>
           </div>
