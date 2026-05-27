@@ -14,6 +14,45 @@ export type Database = {
   }
   public: {
     Tables: {
+      devis_requests: {
+        Row: {
+          created_at: string
+          date: string
+          email: string
+          event_type: string
+          guests: number
+          id: string
+          message: string | null
+          name: string
+          phone: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          date: string
+          email: string
+          event_type: string
+          guests: number
+          id?: string
+          message?: string | null
+          name: string
+          phone: string
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          email?: string
+          event_type?: string
+          guests?: number
+          id?: string
+          message?: string | null
+          name?: string
+          phone?: string
+          status?: string
+        }
+        Relationships: []
+      }
       email_send_log: {
         Row: {
           created_at: string
