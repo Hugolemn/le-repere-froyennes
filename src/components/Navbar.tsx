@@ -34,7 +34,7 @@ const Navbar = () => {
           Le Repère
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center justify-center gap-8 flex-1">
           {navLinks.map((l) => (
             <a
               key={l.href}
