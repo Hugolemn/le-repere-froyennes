@@ -4,20 +4,17 @@ import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
 
 const occasions = [
-  { emoji: "🏢", title: "Événements d'entreprise", desc: "Pauses gourmandes, lunchs et plateaux pour vos équipes et clients." },
-  { emoji: "💍", title: "Mariages", desc: "Un service traiteur sur mesure pour le plus beau jour de votre vie." },
-  { emoji: "🍼", title: "Baptêmes", desc: "Des préparations délicates pour célébrer en famille en toute sérénité." },
-  { emoji: "🎂", title: "Anniversaires", desc: "Petits ou grands comités, on régale vos invités selon vos envies." },
-  { emoji: "🤝", title: "Réunions & séminaires", desc: "Formules pratiques et savoureuses pour vos rendez-vous professionnels." },
-  { emoji: "🎉", title: "Cocktails & réceptions", desc: "Planches, mignardises et bouchées pour des moments conviviaux." },
+  { title: "Événements d'entreprise", desc: "Pauses gourmandes, lunchs et plateaux pour vos équipes et clients." },
+  { title: "Mariages", desc: "Un service traiteur sur mesure pour le plus beau jour de votre vie." },
+  { title: "Baptêmes", desc: "Des préparations délicates pour célébrer en famille en toute sérénité." },
+  { title: "Anniversaires", desc: "Petits ou grands comités, on régale vos invités selon vos envies." },
+  { title: "Réunions & séminaires", desc: "Formules pratiques et savoureuses pour vos rendez-vous professionnels." },
+  { title: "Cocktails & réceptions", desc: "Planches, mignardises et bouchées pour des moments conviviaux." },
 ];
 
 const produits = [
-  { emoji: "🥖", title: "Minis pains bagnats", desc: "Petits pains garnis frais, parfaits pour les buffets et cocktails." },
-  { emoji: "🌯", title: "Wraps", desc: "Variés et colorés, à déguster en bouchées ou en format classique." },
-];
-
-const planches = [
+  { title: "Minis pains bagnats", desc: "Petits pains garnis frais, parfaits pour les buffets et cocktails." },
+  { title: "Wraps", desc: "Variés et colorés, à déguster en bouchées ou en format classique." },
   { title: "Planche Charcuterie", desc: "Sélection de charcuteries fines, accompagnées de pickles et pains." },
   { title: "Planche Mixte", desc: "Le meilleur des deux mondes : charcuterie et fromages affinés." },
   { title: "Planche Fromage", desc: "Assortiment de fromages de caractère, fruits secs et confitures." },
