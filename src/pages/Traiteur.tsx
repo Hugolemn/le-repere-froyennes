@@ -95,9 +95,31 @@ const Traiteur = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    const id = crypto.randomUUID();
-    const templateData = { ...form };
+
     try {
+      // 1. Sauvegarder la demande en base de données
+      const { data: inserted, error: dbError } = await supabase
+        .from("devis_requests")
+        .insert({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          event_type: form.eventType,
+          guests: parseInt(form.guests, 10),
+          date: form.date,
+          message: form.message,
+        })
+        .select("id")
+        .single();
+
+      if (dbError || !inserted) {
+        throw dbError || new Error("Échec de la sauvegarde de la demande");
+      }
+
+      const id = inserted.id;
+      const templateData = { ...form };
+
+      // 2. Envoyer les emails (notification interne + confirmation client)
       const [notif, confirm] = await Promise.all([
         supabase.functions.invoke("send-transactional-email", {
           body: {
@@ -115,16 +137,18 @@ const Traiteur = () => {
           },
         }),
       ]);
+
       if (notif.error || confirm.error) throw notif.error || confirm.error;
+
       toast({
         title: "Demande envoyée !",
         description: "Nous reviendrons vers vous sous 24h. Un email de confirmation vient de vous être envoyé.",
       });
       setForm({ name: "", email: "", phone: "", eventType: "", guests: "", date: "", message: "" });
-    } catch (err) {
+    } catch (err: any) {
       toast({
         title: "Erreur lors de l'envoi",
-        description: "Merci de réessayer ou de nous contacter au 0472 68 41 62.",
+        description: err?.message || "Merci de réessayer ou de nous contacter au 0472 68 41 62.",
         variant: "destructive",
       });
     } finally {
