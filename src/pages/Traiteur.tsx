@@ -13,11 +13,11 @@ const occasions = [
 ];
 
 const produits = [
-  { title: "Minis pains bagnats", desc: "Petits pains garnis frais, parfaits pour les buffets et cocktails." },
-  { title: "Wraps", desc: "Variés et colorés, à déguster en bouchées ou en format classique." },
-  { title: "Planche Charcuterie", desc: "Sélection de charcuteries fines, accompagnées de pickles et pains." },
-  { title: "Planche Mixte", desc: "Le meilleur des deux mondes : charcuterie et fromages affinés." },
-  { title: "Planche Fromage", desc: "Assortiment de fromages de caractère, fruits secs et confitures." },
+  { emoji: "🥪", title: "Minis pains bagnats", desc: "Petits pains garnis frais, parfaits pour les buffets et cocktails." },
+  { emoji: "🌯", title: "Wraps", desc: "Variés et colorés, à déguster en bouchées ou en format classique." },
+  { emoji: "🥓", title: "Planche Charcuterie", desc: "Sélection de charcuteries fines, accompagnées de pickles et pains." },
+  { emoji: "🍖", title: "Planche Mixte", desc: "Le meilleur des deux mondes : charcuterie et fromages affinés." },
+  { emoji: "🧀", title: "Planche Fromage", desc: "Assortiment de fromages de caractère, fruits secs et confitures." },
 ];
 
 const eventTypes = [
@@ -133,9 +133,11 @@ const Traiteur = () => {
               title="Frais, généreux, savoureux"
               subtitle="Des préparations fraîches et généreuses, pensées pour régaler vos invités."
             />
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
               {produits.map((p) => (
-                <Card key={p.title} {...p} />
+                <div key={p.title} className="w-full sm:w-80">
+                  <Card {...p} />
+                </div>
               ))}
             </div>
           </div>
