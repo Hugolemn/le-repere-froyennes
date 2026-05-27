@@ -13,11 +13,11 @@ const occasions = [
 ];
 
 const produits = [
-  { title: "Minis pains bagnats", desc: "Petits pains garnis frais, parfaits pour les buffets et cocktails." },
-  { title: "Wraps", desc: "Variés et colorés, à déguster en bouchées ou en format classique." },
-  { title: "Planche Charcuterie", desc: "Sélection de charcuteries fines, accompagnées de pickles et pains." },
-  { title: "Planche Mixte", desc: "Le meilleur des deux mondes : charcuterie et fromages affinés." },
-  { title: "Planche Fromage", desc: "Assortiment de fromages de caractère, fruits secs et confitures." },
+  { emoji: "🥪", title: "Minis pains bagnats", desc: "Petits pains garnis frais, parfaits pour les buffets et cocktails." },
+  { emoji: "🌯", title: "Wraps", desc: "Variés et colorés, à déguster en bouchées ou en format classique." },
+  { emoji: "🥓", title: "Planche Charcuterie", desc: "Sélection de charcuteries fines, accompagnées de pickles et pains." },
+  { emoji: "🍖", title: "Planche Mixte", desc: "Le meilleur des deux mondes : charcuterie et fromages affinés." },
+  { emoji: "🧀", title: "Planche Fromage", desc: "Assortiment de fromages de caractère, fruits secs et confitures." },
 ];
 
 const eventTypes = [
