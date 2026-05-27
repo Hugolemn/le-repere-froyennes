@@ -175,6 +175,35 @@ Deno.serve(async (req) => {
     )
   }
 
+  // Anti-relay: for the public-facing devis-confirmation template, the
+  // recipientEmail MUST match an actual devis_requests row created within
+  // the last 15 minutes. This prevents abuse of the anon-key callable
+  // endpoint to send legitimate-looking emails to arbitrary addresses.
+  if (templateName === 'devis-confirmation') {
+    const fifteenMinAgo = new Date(Date.now() - 15 * 60 * 1000).toISOString()
+    const { data: matchingRow, error: devisErr } = await supabaseRL
+      .from('devis_requests')
+      .select('id')
+      .eq('email', effectiveRecipient)
+      .gte('created_at', fifteenMinAgo)
+      .limit(1)
+      .maybeSingle()
+    if (devisErr) {
+      console.error('devis_requests lookup failed', { error: devisErr })
+      return new Response(
+        JSON.stringify({ error: 'Failed to verify request' }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+    if (!matchingRow) {
+      console.warn('devis-confirmation rejected: no matching recent request', { effectiveRecipient })
+      return new Response(
+        JSON.stringify({ error: 'No matching request found' }),
+        { status: 403, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      )
+    }
+  }
+
   // Create Supabase client with service role (bypasses RLS)
   const supabase = createClient(supabaseUrl, supabaseServiceKey)
 
