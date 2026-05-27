@@ -16,7 +16,7 @@ const occasions = [
   { title: "Baptêmes", desc: "Des préparations délicates pour célébrer en famille en toute sérénité." },
   { title: "Anniversaires", desc: "Petits ou grands comités, on régale vos invités selon vos envies." },
   { title: "Réunions & séminaires", desc: "Formules pratiques et savoureuses pour vos rendez-vous professionnels." },
-  { title: "Cocktails & réceptions", desc: "Planches, mignardises et bouchées pour des moments conviviaux." },
+  { title: "Team Building & réceptions", desc: "Planches, mignardises et bouchées pour des moments conviviaux." },
   { title: "EVG & EVJF", desc: "Des planches et bouchées savoureuses pour fêter entre amis l'heureux événement." },
   { title: "Enterrements", desc: "Un service discret et respectueux pour accompagner vos proches." },
   { title: "Baby shower", desc: "Douceurs et gourmandises pour célébrer l'arrivée de bébé en toute convivialité." },
@@ -29,6 +29,7 @@ const produits = [
   { emoji: "🥓", title: "Planche Charcuterie", desc: "Sélection de charcuteries fines, accompagnées de pickles et pains." },
   { emoji: "🍖", title: "Planche Mixte", desc: "Le meilleur des deux mondes : charcuterie et fromages affinés." },
   { emoji: "🧀", title: "Planche Fromage", desc: "Assortiment de fromages de caractère, fruits secs et confitures." },
+  { emoji: "📋", title: "Autres demandes sur mesure", desc: "Une idée particulière ? Contactez-nous, nous étudions toutes vos demandes personnalisées." },
 ];
 
 const realisations = [
@@ -44,9 +45,13 @@ const eventTypes = [
   "Mariage",
   "Anniversaire",
   "Baptême",
+  "Baby shower",
   "Événement d'entreprise",
   "Réunion / Séminaire",
-  "Cocktail",
+  "Team Building / Réception",
+  "EVG / EVJF",
+  "Enterrement",
+  "Pause café / Déjeuner",
   "Autre",
 ];
 
