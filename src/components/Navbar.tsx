@@ -34,21 +34,23 @@ const Navbar = () => {
           Le Repère
         </Link>
 
-        <div className="hidden md:flex items-center justify-center gap-8 flex-1">
-          {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={(e) => handleHashClick(e, l.href)}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
-          <span className="text-muted-foreground/40 select-none" aria-hidden="true">|</span>
-          <Link to="/traiteur" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
-            Traiteur
-          </Link>
+        <div className="hidden md:flex items-center flex-1">
+          <div className="flex items-center justify-center gap-8 flex-1">
+            {navLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={(e) => handleHashClick(e, l.href)}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              >
+                {l.label}
+              </a>
+            ))}
+            <span className="text-muted-foreground/40 select-none" aria-hidden="true">|</span>
+            <Link to="/traiteur" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+              Traiteur
+            </Link>
+          </div>
           <a href="tel:0472684162" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
             <Phone size={16} />
             Appeler
