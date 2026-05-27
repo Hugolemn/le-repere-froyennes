@@ -311,9 +311,10 @@ const Traiteur = () => {
               <div className="flex justify-center pt-2">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-base font-bold hover:opacity-90 transition-opacity w-full sm:w-auto"
+                  disabled={submitting}
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-base font-bold hover:opacity-90 transition-opacity w-full sm:w-auto disabled:opacity-60"
                 >
-                  Envoyer ma demande
+                  {submitting ? "Envoi en cours…" : "Envoyer ma demande"}
                 </button>
               </div>
             </form>
