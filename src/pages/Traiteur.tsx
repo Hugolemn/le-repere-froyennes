@@ -97,48 +97,20 @@ const Traiteur = () => {
     setSubmitting(true);
 
     try {
-      // 1. Sauvegarder la demande en base de données
-      const { data: inserted, error: dbError } = await supabase
-        .from("devis_requests")
-        .insert({
+      const { data, error } = await supabase.functions.invoke("submit-devis", {
+        body: {
           name: form.name,
           email: form.email,
           phone: form.phone,
-          event_type: form.eventType,
+          eventType: form.eventType,
           guests: parseInt(form.guests, 10),
           date: form.date,
           message: form.message,
-        })
-        .select("id")
-        .single();
+        },
+      });
 
-      if (dbError || !inserted) {
-        throw dbError || new Error("Échec de la sauvegarde de la demande");
-      }
-
-      const id = inserted.id;
-      const templateData = { ...form };
-
-      // 2. Envoyer les emails (notification interne + confirmation client)
-      const [notif, confirm] = await Promise.all([
-        supabase.functions.invoke("send-transactional-email", {
-          body: {
-            templateName: "devis-notification",
-            idempotencyKey: `devis-notif-${id}`,
-            templateData,
-          },
-        }),
-        supabase.functions.invoke("send-transactional-email", {
-          body: {
-            templateName: "devis-confirmation",
-            recipientEmail: form.email,
-            idempotencyKey: `devis-confirm-${id}`,
-            templateData: { name: form.name, eventType: form.eventType },
-          },
-        }),
-      ]);
-
-      if (notif.error || confirm.error) throw notif.error || confirm.error;
+      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
 
       toast({
         title: "Demande envoyée !",
