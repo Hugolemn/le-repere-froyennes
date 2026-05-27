@@ -2,6 +2,12 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
+import realisation1 from "@/assets/traiteur-realisation-1.jpeg";
+import realisation2 from "@/assets/traiteur-realisation-2.jpeg";
+import realisation3 from "@/assets/traiteur-realisation-3.jpeg";
+import realisation4 from "@/assets/traiteur-realisation-4.png";
+import realisation5 from "@/assets/traiteur-realisation-5.jpeg";
+import realisation6 from "@/assets/traiteur-realisation-6.jpeg";
 
 const occasions = [
   { title: "Événements d'entreprise", desc: "Pauses gourmandes, lunchs et plateaux pour vos équipes et clients." },
@@ -18,6 +24,15 @@ const produits = [
   { emoji: "🥓", title: "Planche Charcuterie", desc: "Sélection de charcuteries fines, accompagnées de pickles et pains." },
   { emoji: "🍖", title: "Planche Mixte", desc: "Le meilleur des deux mondes : charcuterie et fromages affinés." },
   { emoji: "🧀", title: "Planche Fromage", desc: "Assortiment de fromages de caractère, fruits secs et confitures." },
+];
+
+const realisations = [
+  { image: realisation1, alt: "Boîte traiteur Le Repère avec minis pains bagnats prêts à être servis" },
+  { image: realisation2, alt: "Gros plan sur des minis pains bagnats garnis pour un buffet traiteur" },
+  { image: realisation3, alt: "Assortiment de minis pains bagnats présenté sur planche en bois" },
+  { image: realisation4, alt: "Planche apéro traiteur garnie de charcuteries, fruits et gressins" },
+  { image: realisation5, alt: "Sélection de wraps découpés et dressés sur planches en bois" },
+  { image: realisation6, alt: "Gros plan sur des wraps traiteur frais et généreusement garnis" },
 ];
 
 const eventTypes = [
@@ -148,14 +163,17 @@ const Traiteur = () => {
           <div className="container">
             <SectionTitle overline="Nos réalisations" title="Quelques moments gourmands" />
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-              {Array.from({ length: 6 }).map((_, i) => (
+              {realisations.map((realisation) => (
                 <div
-                  key={i}
-                  className="aspect-[4/3] rounded-xl overflow-hidden border border-border bg-gradient-to-br from-brand-light to-card flex items-center justify-center group cursor-pointer"
+                  key={realisation.alt}
+                  className="aspect-[4/3] rounded-xl overflow-hidden border border-border bg-card group"
                 >
-                  <div className="w-full h-full flex items-center justify-center text-muted-foreground/50 text-5xl transition-all duration-500 group-hover:scale-105 group-hover:brightness-125">
-                    🍽️
-                  </div>
+                  <img
+                    src={realisation.image}
+                    alt={realisation.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
               ))}
             </div>
