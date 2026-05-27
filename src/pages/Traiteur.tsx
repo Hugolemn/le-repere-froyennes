@@ -64,7 +64,7 @@ const SectionTitle = ({ overline, title, subtitle }: { overline: string; title: 
 );
 
 const Card = ({ emoji, title, desc }: { emoji?: string; title: string; desc: string }) => (
-  <div className="bg-background rounded-xl p-6 border border-border hover:border-primary/40 hover:shadow-md transition-all group">
+  <div className="bg-background rounded-xl p-6 border border-border hover:border-primary/40 hover:shadow-md transition-all group h-full flex flex-col">
     {emoji && <div className="text-4xl mb-3">{emoji}</div>}
     <h3 className="font-display text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
       {title}
