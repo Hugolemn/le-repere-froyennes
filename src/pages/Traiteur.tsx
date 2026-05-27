@@ -17,6 +17,10 @@ const occasions = [
   { title: "Anniversaires", desc: "Petits ou grands comités, on régale vos invités selon vos envies." },
   { title: "Réunions & séminaires", desc: "Formules pratiques et savoureuses pour vos rendez-vous professionnels." },
   { title: "Cocktails & réceptions", desc: "Planches, mignardises et bouchées pour des moments conviviaux." },
+  { title: "EVG & EVJF", desc: "Des planches et bouchées savoureuses pour fêter entre amis l'heureux événement." },
+  { title: "Enterrements", desc: "Un service discret et respectueux pour accompagner vos proches." },
+  { title: "Baby shower", desc: "Douceurs et gourmandises pour célébrer l'arrivée de bébé en toute convivialité." },
+  { title: "Pause café & Déjeuner", desc: "Formules rapides et savoureuses pour vos pauses et repas du midi." },
 ];
 
 const produits = [
@@ -134,13 +138,13 @@ const Traiteur = () => {
           </div>
           <div className="relative z-10 container text-center px-4 py-24">
             <span className="inline-block bg-primary/90 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-6 animate-fade-up">
-              Service traiteur Le Repère Froyennes
+              ✨ Service traiteur Le Repère Froyennes
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
               Un traiteur <span className="text-primary">à votre image</span>,<br />pour chaque événement
             </h1>
             <p className="text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto mb-10 font-body animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              Du cocktail intimiste au grand mariage, nous mettons notre passion et nos produits frais au service de vos plus beaux moments.
+              De la réunion d'entreprise au grand mariage, nous mettons notre passion et nos produits frais au service de vos plus beaux moments.
             </p>
             <a
               href="#devis"
