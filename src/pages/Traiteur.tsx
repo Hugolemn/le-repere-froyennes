@@ -168,9 +168,11 @@ const Traiteur = () => {
               title="Pour tous vos événements"
               subtitle="Que ce soit pour 10 ou 500 personnes, nous adaptons notre service traiteur à chaque moment de votre vie."
             />
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-5 max-w-5xl mx-auto">
               {occasions.map((o) => (
-                <Card key={o.title} {...o} />
+                <div key={o.title} className="w-full sm:w-[calc(50%-10px)] lg:w-[calc(33.333%-14px)]">
+                  <Card {...o} />
+                </div>
               ))}
             </div>
             <div className="mt-12 max-w-3xl mx-auto text-center">
