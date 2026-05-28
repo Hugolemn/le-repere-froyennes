@@ -25,14 +25,17 @@ function generateToken(): string {
     .join('')
 }
 
-// Auth: this function uses verify_jwt = true in config.toml. We additionally
-// require the caller to present the service_role JWT — the public anon key
-// must NOT be able to invoke this function, because it accepts a caller-
-// supplied recipientEmail and would otherwise be an open mail relay.
+// Auth: config.toml uses verify_jwt = false so modern secret-format service
+// keys can reach this function. We still require the caller to present the
+// exact service-role secret (or a legacy service_role JWT), so the public anon
+// key can never invoke this function as an open mail relay.
 
-function isServiceRoleJwt(authHeader: string | null): boolean {
+function isServiceRoleAuth(authHeader: string | null, serviceKey: string): boolean {
   if (!authHeader?.startsWith('Bearer ')) return false
   const token = authHeader.slice(7)
+
+  if (token === serviceKey) return true
+
   const parts = token.split('.')
   if (parts.length !== 3) return false
   try {
@@ -51,13 +54,6 @@ Deno.serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 
-  if (!isServiceRoleJwt(req.headers.get('Authorization'))) {
-    return new Response(
-      JSON.stringify({ error: 'Unauthorized' }),
-      { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-    )
-  }
-
   const supabaseUrl = Deno.env.get('SUPABASE_URL')
   const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
 
@@ -69,6 +65,13 @@ Deno.serve(async (req) => {
         status: 500,
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
+    )
+  }
+
+  if (!isServiceRoleAuth(req.headers.get('Authorization'), supabaseServiceKey)) {
+    return new Response(
+      JSON.stringify({ error: 'Unauthorized' }),
+      { status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }
 
