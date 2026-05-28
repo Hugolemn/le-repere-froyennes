@@ -98,8 +98,14 @@ Deno.serve(async (req) => {
   const templateData = { name, email, phone, eventType, guests, date, message }
 
   // Fire transactional emails using service-role auth.
+  // We must explicitly set Authorization: the service-role key, because
+  // supabase.functions.invoke from inside an edge function does NOT
+  // auto-attach it — it forwards the anon key, which send-transactional-email
+  // rejects (401 UNAUTHORIZED_INVALID_JWT_FORMAT).
+  const authHeaders = { Authorization: `Bearer ${serviceKey}` }
   const [notif, confirm] = await Promise.all([
     supabase.functions.invoke('send-transactional-email', {
+      headers: authHeaders,
       body: {
         templateName: 'devis-notification',
         idempotencyKey: `devis-notif-${id}`,
@@ -107,6 +113,7 @@ Deno.serve(async (req) => {
       },
     }),
     supabase.functions.invoke('send-transactional-email', {
+      headers: authHeaders,
       body: {
         templateName: 'devis-confirmation',
         recipientEmail: email,
