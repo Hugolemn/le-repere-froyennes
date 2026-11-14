@@ -1,7 +1,7 @@
 import { Phone, Menu } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logoAsset from "@/assets/brand/logo-cream.png.asset.json";
+import logoAsset from "@/assets/brand/logo-yellow.png.asset.json";
 
 const navLinks = [
   { href: "/#accueil", label: "Accueil" },
