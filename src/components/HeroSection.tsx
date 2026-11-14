@@ -26,7 +26,7 @@ const HeroSection = () => {
         </div>
 
         <div className="order-1 lg:order-2 flex justify-center">
-          <div className="relative w-full max-w-[340px] lg:max-w-[400px] aspect-[9/16] max-h-[75vh] rounded-2xl overflow-hidden border border-border shadow-2xl">
+          <div className="relative w-full max-w-[min(340px,calc(75vh*9/16))] lg:max-w-[min(400px,calc(75vh*9/16))] aspect-[9/16] rounded-2xl overflow-hidden border border-border shadow-2xl">
             <video
               src={videoAsset.url}
               poster={posterAsset.url}
@@ -34,8 +34,7 @@ const HeroSection = () => {
               muted
               loop
               playsInline
-              className="w-full h-full object-cover scale-[1.28]"
-              style={{ transformOrigin: "100% 0%" }}
+              className="w-full h-full object-contain"
               aria-label="Croc dans un sandwich Le Repère"
             />
           </div>
