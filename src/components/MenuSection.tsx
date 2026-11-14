@@ -182,6 +182,19 @@ const MenuSection = () => {
             ))}
           </div>
         )}
+
+        {/* Deliveroo order CTA */}
+        <div className="text-center mt-12">
+          <p className="text-muted-foreground mb-4">Envie d'être livré ? Commandez en ligne :</p>
+          <a
+            href="https://deliveroo.be/fr/menu/ghent/tournai-west/le-repere-froyennes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-display font-bold uppercase tracking-wide px-8 py-4 rounded-full hover:opacity-90 transition-opacity shadow-lg"
+          >
+            Commander sur Deliveroo
+          </a>
+        </div>
       </div>
     </section>
   );
