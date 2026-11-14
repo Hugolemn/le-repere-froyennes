@@ -34,7 +34,8 @@ const HeroSection = () => {
               muted
               loop
               playsInline
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover scale-[1.55]"
+              style={{ transformOrigin: "50% 18%" }}
               aria-label="Croc dans un sandwich Le Repère"
             />
           </div>
