@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import videoAsset from "@/assets/brand/croc-sandwich.mp4.asset.json";
+import videoAsset from "@/assets/brand/croc-sandwich-2.mp4.asset.json";
 import posterAsset from "@/assets/brand/croc-poster.jpg.asset.json";
 
 const HeroSection = () => {
@@ -34,7 +34,7 @@ const HeroSection = () => {
               muted
               loop
               playsInline
-              className="w-full h-full object-cover scale-[0.85]"
+              className="w-full h-full object-cover"
               aria-label="Croc dans un sandwich Le Repère"
             />
           </div>
