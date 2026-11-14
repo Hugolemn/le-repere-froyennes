@@ -152,7 +152,7 @@ const MenuSection = () => {
                   : "bg-secondary text-secondary-foreground hover:text-foreground border border-border"
               }`}
             >
-              <span className="mr-1">{c.emoji}</span> {c.label}
+              {c.label}
             </button>
           ))}
         </div>
