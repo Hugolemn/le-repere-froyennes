@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -51,6 +51,40 @@
     --sidebar-accent-foreground: 0 0% 90%;
     --sidebar-border: 0 0% 20%;
     --sidebar-ring: 100 60% 45%;
+    --font-display: "Playfair Display", serif;
+    --font-body: "DM Sans", sans-serif;
+  }
+
+  /* Main page identity: black, mustard, cream */
+  .theme-repere {
+    --background: 220 20% 4%;
+    --foreground: 36 50% 92%;
+    --card: 220 12% 8%;
+    --card-foreground: 36 50% 92%;
+    --popover: 220 12% 8%;
+    --popover-foreground: 36 50% 92%;
+    --primary: 42 78% 53%;
+    --primary-foreground: 220 20% 4%;
+    --secondary: 220 8% 13%;
+    --secondary-foreground: 36 50% 92%;
+    --muted: 220 8% 12%;
+    --muted-foreground: 36 12% 65%;
+    --accent: 42 78% 53%;
+    --accent-foreground: 220 20% 4%;
+    --border: 36 10% 16%;
+    --input: 36 10% 16%;
+    --ring: 42 78% 53%;
+    --brand: 42 78% 53%;
+    --brand-light: 42 40% 14%;
+    --brand-foreground: 220 20% 4%;
+    --radius: 0.5rem;
+    --font-display: "Barlow Condensed", sans-serif;
+    --font-body: "Barlow", sans-serif;
+  }
+  .theme-repere h1, .theme-repere h2, .theme-repere h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    font-weight: 800;
   }
 }
 
