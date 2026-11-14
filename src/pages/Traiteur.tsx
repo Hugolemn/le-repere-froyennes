@@ -32,12 +32,10 @@ const produits = [
 ];
 
 const realisations = [
-  { image: realisationPauseCafe, alt: "Pause café gourmande avec croissant, pain au chocolat, muffin et cappuccino sur planche en bois" },
-  { image: realisation1, alt: "Boîte traiteur Le Repère avec minis pains bagnats prêts à être servis" },
-  { image: realisation6, alt: "Gros plan sur des wraps traiteur frais et généreusement garnis" },
-  { image: realisation4, alt: "Sélection de wraps découpés et dressés sur planches en bois" },
-  { image: realisation3, alt: "Assortiment de minis pains bagnats présenté sur planche en bois" },
-  { image: realisation5, alt: "Gros plan sur des minis pains bagnats garnis pour un buffet traiteur" },
+  { image: planche.url, alt: "Planche charcuterie et fromage avec raisins, grissini et roquette" },
+  { image: minisPains.url, alt: "Assortiment de minis pains bagnats garnis pour un buffet traiteur" },
+  { image: wrapsPlanche.url, alt: "Wraps frais découpés et dressés sur planche en bois" },
+  { image: wrapsSalade.url, alt: "Wraps variés et salade composée en bol pour un déjeuner traiteur" },
 ];
 
 const eventTypes = [
