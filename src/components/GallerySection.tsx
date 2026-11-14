@@ -1,13 +1,13 @@
 import rep3 from "@/assets/brand/rep-3.jpg.asset.json";
 import rep4 from "@/assets/brand/rep-4.jpg.asset.json";
-import livre from "@/assets/brand/livre-main-propre.png.asset.json";
-import photoComptoir from "@/assets/photo-comptoir.jpg";
+import creation2 from "@/assets/brand/creation-2.jpg.asset.json";
+import creation4 from "@/assets/brand/creation-4.jpg.asset.json";
 
 const images = [
   { src: rep3.url, alt: "Sandwich Le Repère servi en main propre" },
-  { src: livre.url, alt: "Livré en main propre : commandé, préparé, servi" },
+  { src: creation2.url, alt: "Création Le Repère" },
   { src: rep4.url, alt: "Croc dans une baguette garnie Le Repère" },
-  { src: photoComptoir, alt: "Le comptoir de la sandwicherie Le Repère à Froyennes" },
+  { src: creation4.url, alt: "Création de la sandwicherie Le Repère à Froyennes" },
 ];
 
 const GallerySection = () => {
