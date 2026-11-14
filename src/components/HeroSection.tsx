@@ -1,39 +1,48 @@
-import { Phone, ArrowDown } from "lucide-react";
-import heroImage from "@/assets/photo-sandwiches.jpg";
+import { Phone } from "lucide-react";
+import videoAsset from "@/assets/brand/croc-sandwich.mp4.asset.json";
+import posterAsset from "@/assets/brand/croc-poster.jpg.asset.json";
 
 const HeroSection = () => {
   return (
-    <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0">
-        <img src={heroImage} alt="Sandwichs frais et salades chez Le Repère à Froyennes" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-background/70" />
-      </div>
+    <section id="accueil" className="relative min-h-screen flex items-center overflow-hidden bg-background pt-16">
+      <div className="container grid lg:grid-cols-2 gap-10 lg:gap-16 items-center py-12 lg:py-20">
+        <div className="text-center lg:text-left order-2 lg:order-1">
+          <span className="inline-block bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-display font-bold uppercase tracking-wider mb-6 animate-fade-up">
+            Sandwicherie à Froyennes
+          </span>
+          <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl leading-[0.9] mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+            <span className="block text-foreground">Frais, généreux,</span>
+            <span className="inline-block bg-primary text-primary-foreground px-3 mt-2">fait minute.</span>
+          </h1>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            Des baguettes croustillantes garnies de produits frais, préparées devant vous chaque jour.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+            <a href="#menu" className="w-full sm:w-auto inline-flex items-center justify-center bg-primary text-primary-foreground px-8 py-4 rounded-lg font-display text-lg font-bold uppercase tracking-wide hover:opacity-90 transition-opacity">
+              Voir le menu
+            </a>
+            <a href="tel:0472684162" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-foreground/30 text-foreground px-8 py-4 rounded-lg font-display text-lg font-bold uppercase tracking-wide hover:bg-foreground/10 transition-colors">
+              <Phone size={18} />
+              Appeler
+            </a>
+          </div>
+        </div>
 
-      <div className="relative z-10 container text-center px-4 py-32">
-        <span className="inline-block bg-primary/90 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-6 animate-fade-up">
-          🥖 Sandwicherie à Froyennes
-        </span>
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-          Des sandwichs frais<br />et généreux à <span className="text-primary">Froyennes</span>
-        </h1>
-        <p className="text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto mb-10 font-body animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          Produits frais, accueil chaleureux et saveurs gourmandes chaque jour.
-        </p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-          <a href="#menu" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-base font-semibold hover:opacity-90 transition-opacity">
-            Voir le menu
-          </a>
-          <a href="tel:0472684162" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-foreground/10 backdrop-blur-sm text-foreground border border-foreground/20 px-8 py-4 rounded-xl text-base font-semibold hover:bg-foreground/20 transition-colors">
-            <Phone size={18} />
-            Appeler
-          </a>
+        <div className="order-1 lg:order-2 flex justify-center">
+          <div className="relative w-full max-w-[340px] lg:max-w-[400px] aspect-[9/16] max-h-[75vh] rounded-2xl overflow-hidden border border-border shadow-2xl">
+            <video
+              src={videoAsset.url}
+              poster={posterAsset.url}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+              aria-label="Croc dans un sandwich Le Repère"
+            />
+          </div>
         </div>
       </div>
-
-      <a href="#apropos" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-foreground/50 animate-bounce">
-        <ArrowDown size={24} />
-      </a>
     </section>
   );
 };
