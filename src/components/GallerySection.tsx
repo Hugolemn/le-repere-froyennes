@@ -21,7 +21,12 @@ const GallerySection = () => {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {images.map((img, i) => (
-            <div key={i} className="relative rounded-xl overflow-hidden aspect-[4/5] group">
+            <div
+              key={i}
+              className={`relative rounded-xl overflow-hidden group ${
+                i === 1 ? "col-span-2 aspect-[8/5]" : "aspect-[4/5]"
+              }`}
+            >
               <img
                 src={img.src}
                 alt={img.alt}
