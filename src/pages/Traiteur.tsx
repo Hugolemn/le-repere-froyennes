@@ -199,7 +199,7 @@ const Traiteur = () => {
         <section className="py-20 lg:py-28 bg-background">
           <div className="container">
             <SectionTitle overline="Nos réalisations" title="Quelques moments gourmands" />
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
               {realisations.map((realisation) => (
                 <div
                   key={realisation.alt}
