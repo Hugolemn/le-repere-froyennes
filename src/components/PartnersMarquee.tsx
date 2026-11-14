@@ -24,7 +24,7 @@ const PartnersMarquee = () => {
   return (
     <section className="py-12 lg:py-16 bg-card border-y border-border overflow-hidden">
       <div className="container mb-8">
-        <p className="text-center text-muted-foreground text-sm uppercase tracking-widest font-semibold">
+        <p className="text-center text-foreground text-sm uppercase tracking-widest font-semibold">
           Ils nous font confiance
         </p>
       </div>
