@@ -3,7 +3,8 @@ import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
-import heroBg from "@/assets/traiteur-hero-bg.png";
+import plancheVideo from "@/assets/media/planche-video.mp4";
+import planchePoster from "@/assets/media/planche-video-poster.jpg";
 import planche from "@/assets/media/planche.jpg";
 import minisPains from "@/assets/media/minis-pains.webp";
 import wrapsPlanche from "@/assets/media/wraps-planche.jpeg";
@@ -128,30 +129,40 @@ const Traiteur = () => {
       <Navbar />
       <main>
         {/* 1. Hero */}
-        <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-16">
-          <div className="absolute inset-0">
-            <img src={heroBg} alt="Confection artisanale d'un pain frais dans la cuisine du Repère" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-background/75" />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
-          </div>
-          <div className="relative z-10 container text-center px-4 py-24">
-            <span className="inline-block bg-primary/90 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-6 animate-fade-up">
-              Service traiteur Le Repère Froyennes
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-              Un traiteur <span className="text-primary">à votre image</span>,<br />pour chaque événement
-            </h1>
-            <p className="text-lg sm:text-xl text-foreground/70 max-w-2xl mx-auto mb-10 font-body animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              De la réunion d'entreprise au grand mariage, nous mettons notre passion et nos produits frais au service de vos plus beaux moments.
-            </p>
-            <a
-              href="#devis"
-              onClick={scrollToDevis}
-              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-base font-semibold hover:opacity-90 transition-opacity animate-fade-up"
-              style={{ animationDelay: "0.3s" }}
-            >
-              Demander un devis
-            </a>
+        <section className="relative min-h-screen flex items-center overflow-hidden bg-background pt-16">
+          <div className="container grid lg:grid-cols-2 gap-8 lg:gap-16 text-center lg:text-left items-center py-12 lg:py-20">
+            <div className="contents lg:block lg:order-1">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-foreground leading-tight lg:mb-6 order-1 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+                Un traiteur <span className="text-primary">à votre image</span>,<br />pour chaque événement
+              </h1>
+              <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 lg:mb-10 order-3 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+                De la réunion d'entreprise au grand mariage, nous mettons notre passion et nos produits frais au service de vos plus beaux moments.
+              </p>
+              <div className="order-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+                <a
+                  href="#devis"
+                  onClick={scrollToDevis}
+                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-base font-semibold hover:opacity-90 transition-opacity"
+                >
+                  Demander un devis
+                </a>
+              </div>
+            </div>
+
+            <div className="order-2 lg:order-2 flex justify-center">
+              <div className="relative w-full max-w-[min(340px,calc(75vh*9/16))] lg:max-w-[min(400px,calc(75vh*9/16))] aspect-[9/16] rounded-2xl overflow-hidden border border-border shadow-2xl">
+                <video
+                  src={plancheVideo}
+                  poster={planchePoster}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-contain"
+                  aria-label="Préparation d'une planche traiteur Le Repère"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
