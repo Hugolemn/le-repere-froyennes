@@ -23,12 +23,12 @@ const occasions = [
 ];
 
 const produits = [
-  { emoji: "🥪", title: "Minis pains bagnats", desc: "Petits pains garnis frais, parfaits pour les buffets et cocktails." },
-  { emoji: "🌯", title: "Wraps", desc: "Variés et colorés, à déguster en bouchées ou en format classique." },
-  { emoji: "🥓", title: "Planche Charcuterie", desc: "Sélection de charcuteries fines, accompagnées de pickles et pains." },
-  { emoji: "🍖", title: "Planche Mixte", desc: "Le meilleur des deux mondes : charcuterie et fromages affinés." },
-  { emoji: "🧀", title: "Planche Fromage", desc: "Assortiment de fromages de caractère, fruits secs et confitures." },
-  { emoji: "📋", title: "Autres demandes sur mesure", desc: "Une idée particulière ? Contactez-nous, nous étudions toutes vos demandes personnalisées." },
+  { title: "Minis pains bagnats", desc: "Petits pains garnis frais, parfaits pour les buffets et cocktails." },
+  { title: "Wraps", desc: "Variés et colorés, à déguster en bouchées ou en format classique." },
+  { title: "Planche Charcuterie", desc: "Sélection de charcuteries fines, accompagnées de pickles et pains." },
+  { title: "Planche Mixte", desc: "Le meilleur des deux mondes : charcuterie et fromages affinés." },
+  { title: "Planche Fromage", desc: "Assortiment de fromages de caractère, fruits secs et confitures." },
+  { title: "Autres demandes sur mesure", desc: "Une idée particulière ? Contactez-nous, nous étudions toutes vos demandes personnalisées." },
 ];
 
 const realisations = [
@@ -60,9 +60,8 @@ const SectionTitle = ({ overline, title, subtitle }: { overline: string; title: 
   </div>
 );
 
-const Card = ({ emoji, title, desc }: { emoji?: string; title: string; desc: string }) => (
+const Card = ({ title, desc }: { title: string; desc: string }) => (
   <div className="bg-background rounded-xl p-6 border border-border hover:border-primary/40 hover:shadow-md transition-all group h-full flex flex-col">
-    {emoji && <div className="text-4xl mb-3">{emoji}</div>}
     <h3 className="font-display text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
       {title}
     </h3>
@@ -137,7 +136,7 @@ const Traiteur = () => {
           </div>
           <div className="relative z-10 container text-center px-4 py-24">
             <span className="inline-block bg-primary/90 text-primary-foreground px-4 py-1.5 rounded-full text-sm font-semibold mb-6 animate-fade-up">
-              ✨ Service traiteur Le Repère Froyennes
+              Service traiteur Le Repère Froyennes
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold text-foreground leading-tight mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
               Un traiteur <span className="text-primary">à votre image</span>,<br />pour chaque événement
@@ -173,7 +172,7 @@ const Traiteur = () => {
             </div>
             <div className="mt-12 max-w-3xl mx-auto text-center">
               <span className="inline-block bg-primary/90 text-primary-foreground px-5 py-2.5 rounded-full text-sm sm:text-base font-semibold">
-                ✨ Chaque événement est unique — nous sommes là pour tous les célébrer, grands ou petits.
+                Chaque événement est unique — nous sommes là pour tous les célébrer, grands ou petits.
               </span>
             </div>
           </div>
