@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
-import videoAsset from "@/assets/brand/croc-sandwich-2.mp4.asset.json";
-import posterAsset from "@/assets/brand/croc-poster.jpg.asset.json";
+import videoAsset from "@/assets/media/croc-sandwich-2.mp4";
+import posterAsset from "@/assets/media/croc-poster.jpg";
 
 const HeroSection = () => {
   return (
@@ -28,8 +28,8 @@ const HeroSection = () => {
         <div className="order-2 lg:order-2 flex justify-center">
           <div className="relative w-full max-w-[min(340px,calc(75vh*9/16))] lg:max-w-[min(400px,calc(75vh*9/16))] aspect-[9/16] rounded-2xl overflow-hidden border border-border shadow-2xl">
             <video
-              src={videoAsset.url}
-              poster={posterAsset.url}
+              src={videoAsset}
+              poster={posterAsset}
               autoPlay
               muted
               loop
