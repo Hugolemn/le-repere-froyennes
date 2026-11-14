@@ -1,0 +1,1 @@
+- Store site images/videos as real files in src/assets/media (not .asset.json pointers): the .com domain is served by Netlify, where Lovable asset URLs don't resolve.
