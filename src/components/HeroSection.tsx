@@ -7,9 +7,6 @@ const HeroSection = () => {
     <section id="accueil" className="relative min-h-screen flex items-center overflow-hidden bg-background pt-16">
       <div className="container grid lg:grid-cols-2 gap-10 lg:gap-16 items-center py-12 lg:py-20">
         <div className="text-center lg:text-left order-2 lg:order-1">
-          <span className="inline-block bg-primary text-primary-foreground px-4 py-1.5 rounded-full text-sm font-display font-bold uppercase tracking-wider mb-6 animate-fade-up">
-            Sandwicherie à Froyennes
-          </span>
           <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl leading-[0.9] mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             <span className="block text-foreground">Frais, généreux,</span>
             <span className="inline-block bg-primary text-primary-foreground px-3 mt-2">fait minute.</span>
