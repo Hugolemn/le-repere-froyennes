@@ -129,7 +129,7 @@ const Traiteur = () => {
   };
 
   return (
-    <>
+    <div className="theme-repere bg-background text-foreground font-body min-h-screen">
       <Navbar />
       <main>
         {/* 1. Hero */}
@@ -329,7 +329,7 @@ const Traiteur = () => {
         </section>
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
