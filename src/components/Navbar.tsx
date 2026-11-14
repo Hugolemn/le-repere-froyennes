@@ -29,7 +29,18 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center" aria-label="Le Repère - Accueil">
+        <Link
+          to="/"
+          className="flex items-center"
+          aria-label="Le Repère - Accueil"
+          onClick={(e) => {
+            setOpen(false);
+            if (isHome) {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
+        >
           <img src={logoAsset} alt="Logo Le Repère" className="h-10 w-auto" />
         </Link>
 
