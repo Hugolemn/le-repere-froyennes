@@ -1,4 +1,3 @@
-import rep3 from "@/assets/brand/rep-3.jpg.asset.json";
 import { Leaf, Clock, Heart, Users } from "lucide-react";
 
 const features = [
@@ -21,10 +20,6 @@ const AboutSection = () => {
             Située à Froyennes, notre sandwicherie est le rendez-vous des amateurs de bons produits. 
             Chez Le Repère, chaque sandwich est préparé avec des ingrédients frais et beaucoup d'amour.
           </p>
-        </div>
-
-        <div className="mb-12 rounded-2xl overflow-hidden border border-border max-w-4xl mx-auto aspect-[16/9]">
-          <img src={rep3.url} alt="Baguette garnie Le Repère tenue en main" className="w-full h-full object-cover object-[center_60%]" loading="lazy" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
