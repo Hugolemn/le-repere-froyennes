@@ -4,12 +4,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
 import heroBg from "@/assets/traiteur-hero-bg.png";
-import realisation1 from "@/assets/traiteur-realisation-1.jpeg";
-import realisation3 from "@/assets/traiteur-realisation-3.jpeg";
-import realisation4 from "@/assets/traiteur-realisation-4.png";
-import realisation5 from "@/assets/traiteur-realisation-5.jpeg";
-import realisation6 from "@/assets/traiteur-realisation-6.jpeg";
-import realisationPauseCafe from "@/assets/traiteur-pause-cafe.jpeg";
+import planche from "@/assets/traiteur/planche.jpg.asset.json";
+import minisPains from "@/assets/traiteur/minis-pains.png.asset.json";
+import wrapsPlanche from "@/assets/traiteur/wraps-planche.jpeg.asset.json";
+import wrapsSalade from "@/assets/traiteur/wraps-salade.png.asset.json";
 
 const occasions = [
   { title: "Événements d'entreprise", desc: "Pauses gourmandes, lunchs et plateaux pour vos équipes et clients." },
