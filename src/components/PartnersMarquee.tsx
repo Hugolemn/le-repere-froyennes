@@ -1,12 +1,12 @@
-import logoAkt from "@/assets/media/partners/logo-6.jpg";
-import logoChwapi from "@/assets/media/partners/logo-7.jpg";
-import logoDecathlon from "@/assets/media/partners/logo-8.jpg";
-import logoIpalle from "@/assets/media/partners/logo-9.jpg";
-import logoMercedes from "@/assets/media/partners/logo-10.jpg";
-import logoAssa from "@/assets/media/partners/logo-11.jpg";
-import logoQuizRoom from "@/assets/media/partners/logo-12.jpg";
-import logoNechin from "@/assets/media/partners/logo-13.jpg";
-import logoTournai from "@/assets/media/partners/logo-14.jpg";
+import logoAkt from "@/assets/media/partners/logo-6.png";
+import logoChwapi from "@/assets/media/partners/logo-7.png";
+import logoDecathlon from "@/assets/media/partners/logo-8.png";
+import logoIpalle from "@/assets/media/partners/logo-9.png";
+import logoMercedes from "@/assets/media/partners/logo-10.png";
+import logoAssa from "@/assets/media/partners/logo-11.png";
+import logoQuizRoom from "@/assets/media/partners/logo-12.png";
+import logoNechin from "@/assets/media/partners/logo-13.png";
+import logoTournai from "@/assets/media/partners/logo-14.png";
 
 const partners = [
   { src: logoAkt, alt: "AKT for Wallonia" },
@@ -38,7 +38,7 @@ const PartnersMarquee = () => {
                 src={p.src}
                 alt={p.alt}
                 loading="lazy"
-                className="h-16 sm:h-20 w-auto rounded-lg mix-blend-screen opacity-80 hover:opacity-100 transition-opacity"
+                className="h-20 sm:h-28 w-auto opacity-90 hover:opacity-100 transition-opacity"
               />
             </div>
           ))}
