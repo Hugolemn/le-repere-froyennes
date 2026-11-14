@@ -33,8 +33,8 @@ const produits = [
 
 const realisations = [
   { image: planche.url, alt: "Planche charcuterie et fromage avec raisins, grissini et roquette" },
-  { image: minisPains.url, alt: "Assortiment de minis pains bagnats garnis pour un buffet traiteur" },
   { image: wrapsPlanche.url, alt: "Wraps frais découpés et dressés sur planche en bois" },
+  { image: minisPains.url, alt: "Assortiment de minis pains bagnats garnis pour un buffet traiteur" },
   { image: wrapsSalade.url, alt: "Wraps variés et salade composée en bol pour un déjeuner traiteur" },
 ];
 
