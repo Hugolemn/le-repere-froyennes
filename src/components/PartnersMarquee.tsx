@@ -31,7 +31,7 @@ const PartnersMarquee = () => {
       <div className="relative">
         <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 z-10 bg-gradient-to-r from-card to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 z-10 bg-gradient-to-l from-card to-transparent" />
-        <div className="flex w-max animate-marquee gap-12 sm:gap-16 pr-12 sm:pr-16">
+        <div className="flex w-max animate-marquee gap-20 sm:gap-28 pr-20 sm:pr-28">
           {[...partners, ...partners].map((p, i) => (
             <div key={`${p.alt}-${i}`} className="flex items-center justify-center shrink-0">
               <img
