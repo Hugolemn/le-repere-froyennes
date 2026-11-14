@@ -4,10 +4,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { toast } from "@/hooks/use-toast";
 import heroBg from "@/assets/traiteur-hero-bg.png";
-import planche from "@/assets/traiteur/planche.jpg.asset.json";
-import minisPains from "@/assets/traiteur/minis-pains.png.asset.json";
-import wrapsPlanche from "@/assets/traiteur/wraps-planche.jpeg.asset.json";
-import wrapsSalade from "@/assets/traiteur/wraps-salade.png.asset.json";
+import planche from "@/assets/media/planche.jpg";
+import minisPains from "@/assets/media/minis-pains.webp";
+import wrapsPlanche from "@/assets/media/wraps-planche.jpeg";
+import wrapsSalade from "@/assets/media/wraps-salade.webp";
 
 const occasions = [
   { title: "Événements d'entreprise", desc: "Pauses gourmandes, lunchs et plateaux pour vos équipes et clients." },
@@ -32,10 +32,10 @@ const produits = [
 ];
 
 const realisations = [
-  { image: planche.url, alt: "Planche charcuterie et fromage avec raisins, grissini et roquette" },
-  { image: wrapsPlanche.url, alt: "Wraps frais découpés et dressés sur planche en bois" },
-  { image: minisPains.url, alt: "Assortiment de minis pains bagnats garnis pour un buffet traiteur" },
-  { image: wrapsSalade.url, alt: "Wraps variés et salade composée en bol pour un déjeuner traiteur" },
+  { image: planche, alt: "Planche charcuterie et fromage avec raisins, grissini et roquette" },
+  { image: wrapsPlanche, alt: "Wraps frais découpés et dressés sur planche en bois" },
+  { image: minisPains, alt: "Assortiment de minis pains bagnats garnis pour un buffet traiteur" },
+  { image: wrapsSalade, alt: "Wraps variés et salade composée en bol pour un déjeuner traiteur" },
 ];
 
 const eventTypes = [

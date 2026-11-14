@@ -1,13 +1,13 @@
-import rep3 from "@/assets/brand/rep-3.jpg.asset.json";
-import rep4 from "@/assets/brand/rep-4.jpg.asset.json";
-import creation2 from "@/assets/brand/creation-2.jpg.asset.json";
-import creation4 from "@/assets/brand/creation-4.jpg.asset.json";
+import rep3 from "@/assets/media/rep-3.jpg";
+import rep4 from "@/assets/media/rep-4.jpg";
+import creation2 from "@/assets/media/creation-2.jpg";
+import creation4 from "@/assets/media/creation-4.jpg";
 
 const images = [
-  { src: rep3.url, alt: "Sandwich Le Repère servi en main propre" },
-  { src: creation2.url, alt: "Création Le Repère" },
-  { src: rep4.url, alt: "Croc dans une baguette garnie Le Repère" },
-  { src: creation4.url, alt: "Création de la sandwicherie Le Repère à Froyennes" },
+  { src: rep3, alt: "Sandwich Le Repère servi en main propre" },
+  { src: creation2, alt: "Création Le Repère" },
+  { src: rep4, alt: "Croc dans une baguette garnie Le Repère" },
+  { src: creation4, alt: "Création de la sandwicherie Le Repère à Froyennes" },
 ];
 
 const GallerySection = () => {

@@ -1,7 +1,7 @@
 import { Phone, Menu } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logoAsset from "@/assets/brand/logo-yellow.png.asset.json";
+import logoAsset from "@/assets/media/logo-yellow.png";
 
 const navLinks = [
   { href: "/#accueil", label: "Accueil" },
@@ -30,7 +30,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center" aria-label="Le Repère - Accueil">
-          <img src={logoAsset.url} alt="Logo Le Repère" className="h-10 w-auto" />
+          <img src={logoAsset} alt="Logo Le Repère" className="h-10 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center flex-1">
